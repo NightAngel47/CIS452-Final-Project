@@ -61,7 +61,7 @@ public class Player_Movement : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
-                rb.gravityScale = 0.5f;
+                rb.gravityScale = 0.6f;
             } else rb.gravityScale = 1f;
         } else rb.gravityScale = 1;
         
@@ -79,7 +79,7 @@ public class Player_Movement : MonoBehaviour
     void SetDirection()
     {
         if (rb.velocity.x != 0)
-            transform.localScale = new Vector3(Mathf.Sign(rb.velocity.x), 1, 1);
+            GetComponent<SpriteRenderer>().flipX = Mathf.Sign(rb.velocity.x) == -1;
     }
 
     void SetMoving()
