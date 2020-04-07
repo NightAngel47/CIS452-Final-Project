@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwarmBat : MonoBehaviour, IObserver
+public class SwarmRat : MonoBehaviour, IObserver
 {
-    private SwarmBehaviorData swarmBatBehavior;
+    private SwarmBehaviorData swarmRatBehavior;
 
     private SpriteRenderer rend;
     private Color defaultColor;
@@ -13,24 +13,25 @@ public class SwarmBat : MonoBehaviour, IObserver
     public void UpdateData(bool inChaseMode, float movementSpeed, float jumpHeight, Color color, float damageRate, float damageStrength)
     {
         defaultColor = color;
+
         chasingPlayer = inChaseMode;
 
         if (chasingPlayer)
         {
-            StartCoroutine(MoveTowardsPlayer(movementSpeed));
+            StartCoroutine(JumpTowardsPlayer(movementSpeed, jumpHeight));
         }
         else if (!chasingPlayer)
         {
-            StartCoroutine(IdleMovement());
+            StartCoroutine(IdleMovement(jumpHeight));
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
+        swarmRatBehavior = FindObjectOfType<SwarmBehaviorData>();
         rend = GetComponent<SpriteRenderer>();
-        swarmBatBehavior.RegisterObserver(this);
+        swarmRatBehavior.RegisterObserver(this);
         chasingPlayer = false;
     }
 
@@ -45,42 +46,25 @@ public class SwarmBat : MonoBehaviour, IObserver
         rend.material.SetColor("_Color", defaultColor);
     }
 
-    private IEnumerator MoveTowardsPlayer(float movementSpeed)
+    private IEnumerator JumpTowardsPlayer(float movementSpeed, float jumpHeight)
     {
-        Debug.Log("Bat moving towards player at the speed of : " + movementSpeed + "! ");
+        Debug.Log("Rat jumping at player at the speed of : " + movementSpeed + " with a height of " + jumpHeight + "! ");
         yield return new WaitForSeconds(1f);
 
         if (chasingPlayer)
         {
-            StartCoroutine(MoveTowardsPlayer(movementSpeed));
+            StartCoroutine(JumpTowardsPlayer(movementSpeed, jumpHeight));
         }
     }
 
-    private IEnumerator IdleMovement()
+    private IEnumerator IdleMovement(float jumpHeight)
     {
-        Debug.Log("Bat idling! ");
+        Debug.Log("Rat idling, and jumping occasionally at a height of " + jumpHeight + " because its a Rat! ");
         yield return new WaitForSeconds(1f);
 
         if (!chasingPlayer)
         {
-            StartCoroutine(IdleMovement());
+            StartCoroutine(IdleMovement(jumpHeight));
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player it by Swarm Bat!");
-        }
-
-        if (other.CompareTag("Projectile"))
-        {
-            Debug.Log("Swarm bat defeated!");
-
-            swarmBatBehavior.RemoveObserver(this);
-            Destroy(this.gameObject);
-        }
-    }
-
 }

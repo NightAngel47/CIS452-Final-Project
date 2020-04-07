@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwarmBatBehaviorData : MonoBehaviour, ISubject
+public class SwarmBehaviorData : MonoBehaviour, ISubject
 {
     private List<IObserver> observerList = new List<IObserver>();
 
     private bool chasingPlayer;
-    public float batMoveSpeed = 1f;
-    public float batJump = 1f;
+    public float moveSpeed = 1f;
+    public float jumpHeight = 1f;
 
-    private Color batColor;
-    public Color normalBatColor;
-    public Color lowHealthBatColor;
+    private Color color;
+    public Color normalColor;
+    public Color lowHealthColor;
 
-    public float batRateOfDamage = 1f;
-    public float batDamageStrength = 1f;
+    public float rateOfDamage = 1f;
+    public float damageStrength = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
         chasingPlayer = false;
-        batColor = normalBatColor;
+        color = normalColor;
+        NotifyObservers();
     }
 
     // Update is called once per frame
@@ -46,14 +47,14 @@ public class SwarmBatBehaviorData : MonoBehaviour, ISubject
     {
         foreach (IObserver observer in observerList)
         {
-            observer.UpdateData(chasingPlayer, batMoveSpeed, batJump, batColor, batRateOfDamage, batDamageStrength);
+            observer.UpdateData(chasingPlayer, moveSpeed, jumpHeight, color, rateOfDamage, damageStrength);
         }
     }
 
     public void RegisterObserver(IObserver observer)
     {
         observerList.Add(observer);
-        observer.UpdateData(chasingPlayer, batMoveSpeed, batJump, batColor, batRateOfDamage, batDamageStrength);
+        observer.UpdateData(chasingPlayer, moveSpeed, jumpHeight, color, rateOfDamage, damageStrength);
     }
 
     public void RemoveObserver(IObserver observer)
