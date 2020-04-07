@@ -67,4 +67,20 @@ public class SwarmRat : MonoBehaviour, IObserver
             StartCoroutine(IdleMovement(jumpHeight));
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player it by Swarm Bat!");
+        }
+
+        if (other.CompareTag("Projectile"))
+        {
+            Debug.Log("Swarm bat defeated!");
+
+            swarmRatBehavior.RemoveObserver(this);
+            Destroy(this.gameObject);
+        }
+    }
 }
