@@ -73,6 +73,11 @@ public class SwarmRat : MonoBehaviour, IObserver
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player it by Swarm Bat!");
+
+            swarmRatBehavior.RemoveObserver(this);
+            Destroy(this.gameObject);
+
+            Debug.Log("The swarm bat also died!");
         }
 
         if (other.CompareTag("Projectile"))
