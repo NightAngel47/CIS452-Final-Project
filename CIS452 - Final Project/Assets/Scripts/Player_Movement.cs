@@ -40,7 +40,6 @@ public class Player_Movement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(settingVelocity.x, settingVelocity.y + rb.velocity.y);
-        print(rb.velocity);
     }
 
     #endregion
