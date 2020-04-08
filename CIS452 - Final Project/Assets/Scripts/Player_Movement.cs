@@ -4,6 +4,8 @@
  * 
  * 
  */
+
+using System;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
@@ -31,11 +33,16 @@ public class Player_Movement : MonoBehaviour
     {
         HorizontalCalculation();
         JumpingCalculation();
-
-        rb.velocity = new Vector2(settingVelocity.x, settingVelocity.y + rb.velocity.y);
-
+        
         AnimationUpdate();
     }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(settingVelocity.x, settingVelocity.y + rb.velocity.y);
+        print(rb.velocity);
+    }
+
     #endregion
 
     #region Player_Movement Functions
@@ -43,7 +50,7 @@ public class Player_Movement : MonoBehaviour
     {
         float horInput = Input.GetAxis("Horizontal");
 
-        settingVelocity = Vector3.right * horInput * moveSpeed * Time.deltaTime;
+        settingVelocity = Vector3.right * horInput * moveSpeed * Time.fixedDeltaTime;
     }
 
     void JumpingCalculation()
