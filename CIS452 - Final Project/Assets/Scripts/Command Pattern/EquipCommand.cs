@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombineCommand : MonoBehaviour, Command
+public class EquipCommand : MonoBehaviour, Command
 {
     public void Execute()
     {
-        CombineReceiver.Combine();
+        EquipReceiver.Equip();
     }
 
     public void Undo()
     {
-        CombineReceiver.Split();
+        EquipReceiver.Dequip();
     }
 }
