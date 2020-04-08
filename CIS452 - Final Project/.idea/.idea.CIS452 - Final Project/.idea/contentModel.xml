@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\sjdro\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\sjdro\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_CIS452 - Final Project.-1019399354.00" t="ExcludeRecursive" />
+    <e p="D:\GitHub\CIS452-Final-Project\CIS452 - Final Project" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Command Pattern" t="Include">
+            <e p="CombineCommand.cs" t="Include" />
+            <e p="CombineReceiver.cs" t="Include" />
+            <e p="Command.cs" t="Include" />
+            <e p="Player_Combine_Invoker.cs" t="Include" />
+          </e>
+          <e p="Observer Pattern" t="Include">
+            <e p="IObserver.cs" t="Include" />
+            <e p="ISubject.cs" t="Include" />
+            <e p="SwarmBat.cs" t="Include" />
+            <e p="SwarmBehaviorData.cs" t="Include" />
+            <e p="SwarmRat.cs" t="Include" />
+          </e>
+          <e p="Player_Movement.cs" t="Include" />
+          <e p="TestSwitchScene.cs" t="Include" />
+          <e p="Tome.cs" t="Include" />
+          <e p="TomePickup.cs" t="Include" />
+        </e>
+        <e p="Temp.cs" t="Include" />
+      </e>
+      <e p="CIS452 - Final Project.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
