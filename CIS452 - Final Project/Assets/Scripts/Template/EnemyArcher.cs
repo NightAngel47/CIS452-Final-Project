@@ -7,6 +7,16 @@ public class EnemyArcher : EnemyTemplate
     public void Update()
     {
         AgroPlayer();
+
+        if(seePlayer == false)
+        {
+            Movement();
+        }
+
+        if(seePlayer == true)
+        {
+            Attack();
+        }
     }
 
     public override void Attack()

@@ -8,6 +8,7 @@ public abstract class EnemyTemplate : MonoBehaviour
     public float distanceToPlayer = 0;
     public float attackRangeMin;
     public float attackRangeMax;
+    //public float health;
 
     public void AgroPlayer()
     {
@@ -30,9 +31,14 @@ public abstract class EnemyTemplate : MonoBehaviour
         }
     }
 
+    public void Death()
+    {
+        Destroy(gameObject);
+    }
+
     public void TemplateMethod()
     {
-
+        //not needed but here just in case
     }
 
     public abstract void Attack();
