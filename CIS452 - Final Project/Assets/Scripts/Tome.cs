@@ -9,10 +9,36 @@ public class Tome : ScriptableObject
     public Sprite uiImage;
     public int damage;
     public float rateOfFire;
-    public GameObject bullet;
+    public Tome bullet;
 
     public void Print()
     {
         Debug.Log(name + ", " + damage / rateOfFire + " DPS.");
+    }
+
+    public void SetBullet(Tome newBullet)
+    {
+        bullet = newBullet;
+    }
+
+    public int GetDamage()
+    {
+        if (bullet)
+        {
+            return bullet.GetDamage() + damage;
+        }
+
+        return damage;
+    
+    }
+
+    public float GetRateOfFire()
+    {
+        if (bullet)
+        {
+            return bullet.GetRateOfFire() + damage;
+        }
+
+        return rateOfFire;
     }
 }
