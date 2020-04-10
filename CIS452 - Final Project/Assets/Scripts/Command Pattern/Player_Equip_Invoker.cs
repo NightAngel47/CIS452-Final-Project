@@ -15,9 +15,12 @@ public class Player_Equip_Invoker : MonoBehaviour
     private EquipCommand equipCommand;
 
     private GameObject nearTome;
+
+    private BulletManager bulletManager;
         
     private void Awake()
     {
+        bulletManager = FindObjectOfType<BulletManager>();
         nearTome = null;
         equipCommand = gameObject.AddComponent<EquipCommand>();
     }
@@ -41,6 +44,11 @@ public class Player_Equip_Invoker : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             equipCommand.Execute();
+
+            if (bulletManager)
+            {
+                bulletManager.Combine();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -51,6 +59,12 @@ public class Player_Equip_Invoker : MonoBehaviour
             }
 
             equipCommand.Undo();
+
+            if (bulletManager)
+            {
+                bulletManager.Combine();
+            }
+
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))

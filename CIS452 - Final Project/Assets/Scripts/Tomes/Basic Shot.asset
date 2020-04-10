@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1042ee36aa9e4b141a19cf640ab6deca, type: 3}
   m_Name: Basic Shot
   m_EditorClassIdentifier: 
-  name: Basic Shot
-  uiImage: {fileID: 0}
   damage: 3
   rateOfFire: 1
+  speed: 2
   bullet: {fileID: 0}
+  name: Basic Shot
+  uiImage: {fileID: 0}

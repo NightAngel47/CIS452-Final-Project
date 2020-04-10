@@ -3,37 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletManager : MonoBehaviour
-{ 
+{
     public Tome thisTome;
+    public GameObject spellVisual;
 
-    private void Update()
+    public void Combine()
     {
-        if (Input.GetKeyUp(KeyCode.S))
+        foreach (Tome t in Player_Equip_Invoker.tomeStack)
         {
-            Shoot();
+            t.SetBullet(null);
         }
-    }
-    private void SetTomes()
-    {
-       foreach(Tome t in Player_Equip_Invoker.tomeStack)
+
+        foreach (Tome t in Player_Equip_Invoker.tomeStack)
         {
             thisTome = Instantiate(t);
             t.SetBullet(thisTome);
         }
     }
 
-    public void Shoot()
-    {
-        thisTome = null;
+    public int GetDamage() { return thisTome.GetDamage(); }
 
-        foreach (Tome t in Player_Equip_Invoker.tomeStack)
-        {
-            t.SetBullet(null);
-        }
+    public float GetFireRate() { return thisTome.GetRateOfFire(); }
 
-        Debug.Log(Player_Equip_Invoker.tomeStack.Count);
-        SetTomes();
-        Debug.Log("Bullet Damage " + thisTome.GetDamage());
-        Debug.Log("Fire Rate " + thisTome.GetRateOfFire());
-    }
+    public float GetSpeed() { return thisTome.GetSpeed(); }
 }
