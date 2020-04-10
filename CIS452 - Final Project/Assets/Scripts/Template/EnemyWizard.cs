@@ -29,6 +29,7 @@ public class EnemyWizard : EnemyTemplate
 
     public override void Movement()
     {
+        //called randomly when not aggroed
         Debug.Log("Wizard Teleported");
     }
 }

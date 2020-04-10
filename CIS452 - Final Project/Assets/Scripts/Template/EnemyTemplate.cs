@@ -32,7 +32,8 @@ public abstract class EnemyTemplate : MonoBehaviour
     }
 
     public void Death()
-    {
+    { 
+        //called when player attacks enemy
         Destroy(gameObject);
     }
 

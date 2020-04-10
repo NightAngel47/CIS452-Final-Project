@@ -29,7 +29,7 @@ namespace Simple_Factory
                     break;
                 case EnemyTypes.Warrior: enemyToSpawn = enemies[(int) EnemyTypes.Warrior];
                     break;
-                case EnemyTypes.Wizard: enemyToSpawn = enemies[(int) EnemyTypes.Rat];
+                case EnemyTypes.Wizard: enemyToSpawn = enemies[(int) EnemyTypes.Wizard];
                     break;
                 default:
                     Debug.LogError("Enemy type not listed. Passed type: " + enemyType);
