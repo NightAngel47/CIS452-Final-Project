@@ -2,22 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletManager : MonoBehaviour
+public class TomeManager : MonoBehaviour
 {
-    public Tome thisTome;
+    public BaseTome thisTome;
     public GameObject spellVisual;
 
+    private void Start()
+    {
+        thisTome = null;
+        thisTome = ScriptableObject.CreateInstance<ConcreteTome>();
+    }
     public void Combine()
     {
+        thisTome = null;
+        thisTome = ScriptableObject.CreateInstance<ConcreteTome>();
         foreach (Tome t in Player_Equip_Invoker.tomeStack)
         {
-            t.SetBullet(null);
+            t.SetTome(thisTome);
         }
 
         foreach (Tome t in Player_Equip_Invoker.tomeStack)
         {
             thisTome = Instantiate(t);
-            t.SetBullet(thisTome);
+            t.SetTome(thisTome);
         }
     }
 

@@ -16,11 +16,11 @@ public class Player_Equip_Invoker : MonoBehaviour
 
     private GameObject nearTome;
 
-    private BulletManager bulletManager;
+    private TomeManager tomeManager;
         
     private void Awake()
     {
-        bulletManager = FindObjectOfType<BulletManager>();
+        tomeManager = FindObjectOfType<TomeManager>();
         nearTome = null;
         equipCommand = gameObject.AddComponent<EquipCommand>();
     }
@@ -45,9 +45,9 @@ public class Player_Equip_Invoker : MonoBehaviour
         {
             equipCommand.Execute();
 
-            if (bulletManager)
+            if (tomeManager)
             {
-                bulletManager.Combine();
+                tomeManager.Combine();
             }
         }
 
@@ -60,9 +60,9 @@ public class Player_Equip_Invoker : MonoBehaviour
 
             equipCommand.Undo();
 
-            if (bulletManager)
+            if (tomeManager)
             {
-                bulletManager.Combine();
+                tomeManager.Combine();
             }
 
         }

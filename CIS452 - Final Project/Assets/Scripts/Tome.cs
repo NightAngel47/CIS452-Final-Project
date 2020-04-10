@@ -3,20 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewTome", menuName = "Tome")]
-public class Tome : ScriptableObject
+public class Tome : BaseTome
 {
     public new string name;
     public Sprite uiImage;
 
-    public int damage;
-    public float rateOfFire;
-    public float speed;
+    [HideInInspector] public BaseTome tome;
 
-    [HideInInspector] public Tome bullet;
-
-    public void SetBullet(Tome newBullet)
+    public void SetTome(BaseTome newTome)
     {
-        bullet = newBullet;
+        tome = newTome;
     }
 
     public void Print()
@@ -25,35 +21,19 @@ public class Tome : ScriptableObject
     }
 
     #region Get Stats
-    public int GetDamage()
+    public override int GetDamage()
     {
-        if (bullet)
-        {
-            return bullet.GetDamage() + damage;
-        }
-
-        return damage;
-
+        return tome.GetDamage() + damage;
     }
 
-    public float GetRateOfFire()
+    public override float GetRateOfFire()
     {
-        if (bullet)
-        {
-            return bullet.GetRateOfFire() / rateOfFire;
-        }
-
-        return rateOfFire;
+        return tome.GetRateOfFire() / rateOfFire;
     }
 
-    public float GetSpeed()
+    public override float GetSpeed()
     {
-        if (bullet)
-        {
-            return bullet.GetRateOfFire() + damage;
-        }
-
-        return rateOfFire;
+        return tome.GetRateOfFire() + damage;
     }
 
     #endregion
