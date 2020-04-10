@@ -2365,6 +2365,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8484060703442862286, guid: 3776d9a6a66aa7c40ad5a390757a0255,
+        type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484060703442862286, guid: 3776d9a6a66aa7c40ad5a390757a0255,
+        type: 3}
+      propertyPath: castRadius
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3776d9a6a66aa7c40ad5a390757a0255, type: 3}
 --- !u!1001 &4101813085651166369
@@ -2389,6 +2399,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4101813084368866380, guid: fd1970adcdc07a742be43e00003a45c9,
         type: 3}
@@ -2519,6 +2534,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8998335782564350144, guid: b35aead0d2066b544a12f0a6050403d4,
+        type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8998335782564350144, guid: b35aead0d2066b544a12f0a6050403d4,
+        type: 3}
+      propertyPath: castRadius
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b35aead0d2066b544a12f0a6050403d4, type: 3}
 --- !u!1001 &7944327510462138885
@@ -2587,6 +2612,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wizard Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429076013248826261, guid: 3ab43f2dee556fc4cb7e64312d49e38c,
+        type: 3}
+      propertyPath: layers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429076013248826261, guid: 3ab43f2dee556fc4cb7e64312d49e38c,
+        type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429076013248826261, guid: 3ab43f2dee556fc4cb7e64312d49e38c,
+        type: 3}
+      propertyPath: castRadius
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab43f2dee556fc4cb7e64312d49e38c, type: 3}

@@ -8,21 +8,21 @@ public abstract class EnemyTemplate : MonoBehaviour
     public float distanceToPlayer = 0;
     public float attackRangeMin;
     public float attackRangeMax;
+    public float castRadius;
+    public LayerMask playerLayer;
     //public float health;
 
     public void AgroPlayer()
     {
-        RaycastHit hit;
-
+        RaycastHit2D playerCheck;
         Vector3 p1 = transform.position;
 
-        if (Physics.SphereCast(p1, 10 / 2, transform.forward, out hit, 10))
+        playerCheck = Physics2D.CircleCast(transform.position, castRadius, Vector2.zero, 0.3f, playerLayer);
+
+        if(playerCheck.transform != null)
         {
-            if(hit.collider.gameObject.CompareTag("Player"))
-            {
-                seePlayer = true;
-                distanceToPlayer = hit.distance;
-            }
+            seePlayer = true;
+            //distanceToPlayer = hit.distance;
         }
 
         else
@@ -33,7 +33,8 @@ public abstract class EnemyTemplate : MonoBehaviour
 
     public void Death()
     { 
-        //called when player attacks enemy
+        //called when player attacks enemy\
+        //since no attack is fully in enemy will not die
         Destroy(gameObject);
     }
 

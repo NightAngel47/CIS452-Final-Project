@@ -30,6 +30,11 @@ public class EnemyWizard : EnemyTemplate
     public override void Movement()
     {
         //called randomly when not aggroed
-        Debug.Log("Wizard Teleported");
+        int rand = Random.Range(0, 20);
+
+        if (rand <= 3)
+        {
+            Debug.Log("Wizard Teleported");
+        }
     }
 }

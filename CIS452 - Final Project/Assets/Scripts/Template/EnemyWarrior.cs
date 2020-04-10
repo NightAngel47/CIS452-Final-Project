@@ -30,6 +30,11 @@ public class EnemyWarrior : EnemyTemplate
     public override void Movement()
     {
         //called randomly when not aggroed
-        Debug.Log("Warrior Moved Agressively");
+        int rand = Random.Range(0, 20);
+
+        if (rand <= 3)
+        {
+            Debug.Log("Warrior Moved Agressively");
+        }
     }
 }

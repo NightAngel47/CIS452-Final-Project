@@ -30,6 +30,11 @@ public class EnemyArcher : EnemyTemplate
     public override void Movement()
     {
         //called randomly when not aggroed
-        Debug.Log("Archer Moved");
+        int rand = Random.Range(0, 20);
+
+        if (rand <= 3)
+        {
+            Debug.Log("Archer Moved");
+        }
     }
 }
