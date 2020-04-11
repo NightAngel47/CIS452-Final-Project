@@ -3,6 +3,13 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+/*
+ * Steven Drovie
+ * EnemySpawner.cs
+ * CIS452 - Final Project
+ * Handles spawning enemies with simple factory pattern
+ */
+
 namespace Simple_Factory
 {
     [RequireComponent(typeof(EnemyFactory))]

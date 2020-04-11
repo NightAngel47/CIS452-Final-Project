@@ -8,6 +8,13 @@
 using System;
 using UnityEngine;
 
+/*
+ * Connor Wolf, Steven Drovie
+ * Player_Movement.cs
+ * CIS452 - Final Project
+ * Handles basic player movement and jumping
+ */
+
 public class Player_Movement : MonoBehaviour
 {
     #region Publics Variables

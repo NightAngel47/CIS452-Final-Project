@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Connor Wolf
+ * TomePickup.cs
+ * CIS452 - Final Project
+ * Handles picking up tomes
+ */
+
 public class TomePickup : MonoBehaviour
 {
     public Tome tome;

@@ -1,6 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Steven Drovie
+ * EnemyFactory.cs
+ * CIS452 - Final Project
+ * Handles simple factory pattern for enemy spawning
+ */
+
 namespace Simple_Factory
 {
     public class EnemyFactory : MonoBehaviour

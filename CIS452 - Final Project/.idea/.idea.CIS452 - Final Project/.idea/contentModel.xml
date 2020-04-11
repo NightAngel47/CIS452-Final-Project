@@ -13,6 +13,13 @@
             <e p="EquipReceiver.cs" t="Include" />
             <e p="Player_Equip_Invoker.cs" t="Include" />
           </e>
+          <e p="Decorator Pattern" t="Include">
+            <e p="BaseTome.cs" t="Include" />
+            <e p="ConcreteTome.cs" t="Include" />
+            <e p="PlayerFireSpells.cs" t="Include" />
+            <e p="TempSpellScripts.cs" t="Include" />
+            <e p="TomeManager.cs" t="Include" />
+          </e>
           <e p="Observer Pattern" t="Include">
             <e p="IObserver.cs" t="Include" />
             <e p="ISubject.cs" t="Include" />
@@ -25,6 +32,7 @@
             <e p="EnemyFactory.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
           </e>
+          <e p="Temp.cs" t="Include" />
           <e p="Template" t="Include">
             <e p="EnemyArcher.cs" t="Include" />
             <e p="EnemyTemplate.cs" t="Include" />
@@ -35,7 +43,6 @@
           <e p="Tome.cs" t="Include" />
           <e p="TomePickup.cs" t="Include" />
         </e>
-        <e p="Temp.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

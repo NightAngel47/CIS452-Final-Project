@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Levi Schoof
+ * BaseTome.cs
+ * CIS452 - Final Project
+ * Abstract class for tomes
+ */
+
 public abstract class BaseTome : ScriptableObject
 {
     public int damage;

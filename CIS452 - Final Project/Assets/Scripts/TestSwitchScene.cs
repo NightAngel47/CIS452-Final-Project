@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * William Nomikos
+ * TestSwitchScene.cs
+ * CIS452 - Final Project
+ * Changes scenes
+ */
+
 public class TestSwitchScene : MonoBehaviour
 {
     // Start is called before the first frame update

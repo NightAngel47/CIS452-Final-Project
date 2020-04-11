@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Levi Schoof
+ * PlayerFireSpells.cs
+ * CIS452 - Final Project
+ * Handles firing spells on player input
+ */
+
 public class PlayerFireSpells : MonoBehaviour
 {
     TomeManager tomeManager;

@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Levi Schoof
+ * ConcreteTome.cs
+ * CIS452 - Final Project
+ * Concrete class for tomes
+ */
+
 public class ConcreteTome : BaseTome
 {
     public override int GetDamage()

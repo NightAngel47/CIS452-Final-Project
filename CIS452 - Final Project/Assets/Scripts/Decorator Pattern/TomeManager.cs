@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+/*
+ * Levi Schoof
+ * TomeManager.cs
+ * CIS452 - Final Project
+ * Manages tomes
+ */
+
 public class TomeManager : MonoBehaviour
 {
     public BaseTome thisTome;

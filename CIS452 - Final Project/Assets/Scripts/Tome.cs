@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Connor Wolf, Levi Schoof
+ * Tome.cs
+ * CIS452 - Final Project
+ * Script for handling tomes
+ */
+
 [CreateAssetMenu(fileName = "NewTome", menuName = "Tome")]
 public class Tome : BaseTome
 {
