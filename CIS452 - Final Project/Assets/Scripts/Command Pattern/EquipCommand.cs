@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* Conner
+* EquipCommand.cs
+* Final Project
+* Equips and unequips tomes to the receiver. 
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

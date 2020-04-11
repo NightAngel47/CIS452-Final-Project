@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* Conner
+* Player_Equip_Invoker.cs
+* Final Project
+* Invoker handles equipping tomes to and from player upon the player
+* picking them up, combining tomes, and dropping tomes.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

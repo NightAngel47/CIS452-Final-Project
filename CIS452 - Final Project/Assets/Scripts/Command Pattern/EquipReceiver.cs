@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* Conner
+* EquipReceiver.cs
+* Final Project
+* Pushes and pops tomes to and from stack upon tomes being equipped or dequipped. 
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
