@@ -1,5 +1,5 @@
 ﻿/*
-* Conner
+* Conner Wolf
 * EquipReceiver.cs
 * Final Project
 * Pushes and pops tomes to and from stack upon tomes being equipped or dequipped. 

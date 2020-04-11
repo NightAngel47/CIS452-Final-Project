@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* William Nomikos
+* SwarmBat.cs
+* Final Project
+* Concrete observer that handles behavior for the Swarm Bat enemy based on the subject.
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

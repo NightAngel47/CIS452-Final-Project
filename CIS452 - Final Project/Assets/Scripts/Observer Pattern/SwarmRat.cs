@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* William Nomikos
+* SwarmRat.cs
+* Final Project
+* Concrete observer that handles behavior for the Swarm Rat enemy based on the subject.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

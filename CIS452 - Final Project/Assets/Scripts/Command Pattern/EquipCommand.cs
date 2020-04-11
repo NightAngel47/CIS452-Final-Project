@@ -1,5 +1,5 @@
 ﻿/*
-* Conner
+* Conner Wolf
 * EquipCommand.cs
 * Final Project
 * Equips and unequips tomes to the receiver. 

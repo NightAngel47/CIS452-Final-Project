@@ -1,5 +1,5 @@
 ﻿/*
-* Conner
+* Conner Wolf
 * Player_Equip_Invoker.cs
 * Final Project
 * Invoker handles equipping tomes to and from player upon the player

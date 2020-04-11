@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* William Nomikos
+* ISubject.cs
+* Final Project
+* Subject interface allows observers to be registered, removed, and notified.
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

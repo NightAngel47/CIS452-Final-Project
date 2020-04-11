@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* William Nomikos
+* SwarmBehaviorData.cs
+* Final Project
+* Subject that handles notifying its concrete observers. If its observers
+* should be chasing the players, the observers will be notified.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

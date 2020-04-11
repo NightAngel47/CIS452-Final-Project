@@ -1,5 +1,5 @@
 ﻿/*
-* Conner
+* Conner Wolf
 * Command.cs
 * Final Project
 * Command interface that contains the execute and undo commands.
