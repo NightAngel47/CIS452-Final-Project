@@ -33,7 +33,7 @@ public class Tome : BaseTome
 
     public override float GetSpeed()
     {
-        return tome.GetRateOfFire() + damage;
+        return tome.GetSpeed() + damage;
     }
 
     #endregion
