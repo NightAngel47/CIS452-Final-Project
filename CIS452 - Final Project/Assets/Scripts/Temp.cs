@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* William Nomikos
+* Temp.cs
+* Final Project
+* Handles main menu button navigation. Temporary until we have an implemented main menu.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
