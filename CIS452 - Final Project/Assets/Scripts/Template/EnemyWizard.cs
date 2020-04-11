@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * Sydney Foe
+ * Assignment 10
+ * EnemyWizard
+ * Sets up the wizards behaviours. How it moves and attacks. 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
