@@ -19,6 +19,8 @@ public abstract class EnemyTemplate : MonoBehaviour
     public LayerMask playerLayer;
     //public float health;
 
+    public int enemyType;
+
     public void AgroPlayer()
     {
         RaycastHit2D playerCheck;
@@ -47,7 +49,23 @@ public abstract class EnemyTemplate : MonoBehaviour
 
     public void TemplateMethod()
     {
-        //not needed but here just in case
+        AgroPlayer();
+
+        if (seePlayer == false)
+        {
+            if(enemyType == 1)
+            {
+                gameObject.transform.position = Vector3.zero;
+            }
+            Movement();
+        }
+
+        if (seePlayer == true)
+        {
+            Attack();
+        }  
+
+        
     }
 
     public abstract void Attack();

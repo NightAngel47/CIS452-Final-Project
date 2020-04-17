@@ -11,26 +11,11 @@ using UnityEngine;
 
 public class EnemyWarrior : EnemyTemplate
 {
-    public void Update()
-    {
-        AgroPlayer();
-
-        if (seePlayer == false)
-        {
-            Movement();
-        }
-
-        if (seePlayer == true)
-        {
-            Attack();
-        }
-    }
-
     public override void Attack()
     {
         if (seePlayer == true && (distanceToPlayer > attackRangeMin && distanceToPlayer < attackRangeMax))
         {
-            Debug.Log("Warrior Attacks");
+            //Debug.Log("Warrior Attacks");
         }
     }
 
@@ -41,7 +26,7 @@ public class EnemyWarrior : EnemyTemplate
 
         if (rand <= 3)
         {
-            Debug.Log("Warrior Moved Agressively");
+            //Debug.Log("Warrior Moved Agressively");
         }
     }
 }

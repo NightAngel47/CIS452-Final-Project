@@ -11,26 +11,11 @@ using UnityEngine;
 
 public class EnemyArcher : EnemyTemplate
 {
-    public void Update()
-    {
-        AgroPlayer();
-
-        if(seePlayer == false)
-        {
-            Movement();
-        }
-
-        if(seePlayer == true)
-        {
-            Attack();
-        }
-    }
-
     public override void Attack()
     {
         if (seePlayer == true && distanceToPlayer > attackRangeMin)
         {
-            Debug.Log("Archer Shoots Arrow");
+           // Debug.Log("Archer Shoots Arrow");
         }
     }
 
@@ -41,7 +26,7 @@ public class EnemyArcher : EnemyTemplate
 
         if (rand <= 3)
         {
-            Debug.Log("Archer Moved");
+            //Debug.Log("Archer Moved");
         }
     }
 }
