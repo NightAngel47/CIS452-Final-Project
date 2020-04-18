@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         halfHealthState = this.GetComponent<HalfHealth>();
         quarterHealthState = this.GetComponent<QuarterHealth>();
 
-        ChangeState();
+        ChangeState(0);
     }
 
     // Update is called once per frame
@@ -49,11 +49,6 @@ public class PlayerHealth : MonoBehaviour
             currentHealthState.PlayerHealed();
         }
 
-        else
-        {
-            Debug.Log("Heal Visuals");
-        }
-
         currentHealth -= damage;
 
         if(currentHealth > maxHealth)
@@ -68,10 +63,10 @@ public class PlayerHealth : MonoBehaviour
 
         healthBar.value = currentHealth;
 
-        ChangeState();
+        ChangeState(damage);
     }
 
-    private void ChangeState()
+    private void ChangeState(int dam)
     {
         if(currentHealth > maxHealth / 2) {currentHealthState = fullHealthState;}
         else if(currentHealth <= maxHealth /2 && currentHealth > maxHealth / 4){ currentHealthState = halfHealthState; }
@@ -79,6 +74,18 @@ public class PlayerHealth : MonoBehaviour
         else { currentHealthState = deadHealthState; }
 
         currentHealthState.ChangeMovementParticle();
+        if(dam > 0)
+        {
+            currentHealthState.TakeDamage();
+        }
+
+        else if (dam < 0)
+        {
+            currentHealthState.PlayerHealed();
+        }
+     
+        
+
     }
 
     private void PlayerDied()

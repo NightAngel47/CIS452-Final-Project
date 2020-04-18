@@ -30,10 +30,7 @@ public class PlayerFireSpells : MonoBehaviour
     {
         currentTime += Time.deltaTime;
 
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseDir = mousePos - gameObject.transform.position;
-        mouseDir.z = 0.0f;
-        mouseDir = mouseDir.normalized;
+  
 
         FireSpell();
     }
@@ -43,11 +40,15 @@ public class PlayerFireSpells : MonoBehaviour
 
         if (currentTime > tomeManager.GetFireRate() && Input.GetMouseButton(0))
         {
-            Debug.Log("FireRate " + tomeManager.GetFireRate());
-            Debug.Log("Damage " + tomeManager.GetDamage());
+
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseDir = mousePos - gameObject.transform.position;
+            mouseDir.z = 0.0f;
+            mouseDir = mouseDir.normalized;
+
             currentTime = 0;
             currentSpell = Instantiate(spellPrefab, this.transform.position, Quaternion.identity);
-            currentSpell.GetComponent<Rigidbody2D>().AddForce(mouseDir * tomeManager.GetSpeed() * Time.deltaTime);
+            currentSpell.GetComponent<Rigidbody2D>().velocity = (mouseDir * tomeManager.GetSpeed());
         }
 
 
