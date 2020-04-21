@@ -16,6 +16,11 @@ public class PlayerHealth : MonoBehaviour
     HalfHealth halfHealthState;
     QuarterHealth quarterHealthState;
 
+    private float maxInvinceTime = .5f;
+    private bool isInvince;
+
+    GameManager gm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,14 +28,18 @@ public class PlayerHealth : MonoBehaviour
         healthBar.value = maxHealth;
         currentHealth = maxHealth;
 
-        currentHealthState = fullHealthState;
+     
 
         deadHealthState = this.GetComponent<Dead>();
         fullHealthState = this.GetComponent<FullHealth>();
         halfHealthState = this.GetComponent<HalfHealth>();
         quarterHealthState = this.GetComponent<QuarterHealth>();
 
-        ChangeState(0);
+        currentHealthState = fullHealthState;
+
+        currentHealthState.ChangeMovementParticle();
+
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -40,25 +49,36 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(1);
         }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            TakeDamage(-1);
+        }
     }
 
     private void TakeDamage(int damage)
     {
-        if(damage < 0)
+        if (damage < 0)
         {
             currentHealthState.PlayerHealed();
         }
 
+        else
+        {
+            StopCoroutine(InvinceTime());
+            StartCoroutine(InvinceTime());
+        }
+
         currentHealth -= damage;
 
-        if(currentHealth > maxHealth)
+        if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
 
-        else if(currentHealth <= 0)
+        else if (currentHealth <= 0)
         {
-            PlayerDied();
+            currentHealthState = deadHealthState;
         }
 
         healthBar.value = currentHealth;
@@ -68,13 +88,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void ChangeState(int dam)
     {
-        if(currentHealth > maxHealth / 2) {currentHealthState = fullHealthState;}
-        else if(currentHealth <= maxHealth /2 && currentHealth > maxHealth / 4){ currentHealthState = halfHealthState; }
-        else if(currentHealth > 0 && currentHealth <= maxHealth / 4) { currentHealthState = quarterHealthState; }
-        else { currentHealthState = deadHealthState; }
+        if (currentHealth > maxHealth / 2) { currentHealthState = fullHealthState; }
+        else if (currentHealth <= maxHealth / 2 && currentHealth > maxHealth / 4) { currentHealthState = halfHealthState; }
+        else if (currentHealth > 0 && currentHealth <= maxHealth / 4) { currentHealthState = quarterHealthState; }
 
-        currentHealthState.ChangeMovementParticle();
-        if(dam > 0)
+        if (dam > 0)
         {
             currentHealthState.TakeDamage();
         }
@@ -83,13 +101,47 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealthState.PlayerHealed();
         }
-     
-        
-
     }
 
-    private void PlayerDied()
+    #region DamageColliders
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log("Oh Shucks You Died");
+        if (collision.gameObject.CompareTag("Enemy") & !isInvince)
+        {
+            TakeDamage(1);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") & !isInvince)
+        {
+            TakeDamage(1);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("EnemyProjectile") & !isInvince)
+        {
+            TakeDamage(1);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("EnemyProjectile") & !isInvince)
+        {
+            TakeDamage(1);
+        }
+    }
+
+    #endregion
+
+    IEnumerator InvinceTime()
+    {
+        isInvince = true;
+        yield return new WaitForSeconds(maxInvinceTime);
+        isInvince = false;
     }
 }

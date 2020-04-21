@@ -7,13 +7,10 @@ public class QuarterHealth : HealthStates
 {
     public override void ChangeMovementParticle()
     {
-        movementParticles.startColor = Color.red;
-        movementParticles.emissionRate = 50;
-    }
-
-    public override void PlayerHealed()
-    {
-        throw new System.NotImplementedException();
+        ParticleSystem.MainModule settings = movementParticles.main;
+        settings.startColor = new ParticleSystem.MinMaxGradient(Color.red);
+        ParticleSystem.EmissionModule em = movementParticles.emission;
+        em.rateOverTime = 20;
     }
 
     public override void TakeDamage()
@@ -27,5 +24,7 @@ public class QuarterHealth : HealthStates
             flashImage.GetComponent<Image>().color = tempColor;
             StartCoroutine(FadeImage());
         }
+
+        ChangeMovementParticle();
     }
 }

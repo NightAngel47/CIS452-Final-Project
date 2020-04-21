@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 7219995647693174629}
   m_Layer: 0
   m_Name: Rat Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3646828712392552584}
   healthMax: 10
+  knockback: 1
 --- !u!1 &6190399567287207322
 GameObject:
   m_ObjectHideFlags: 0

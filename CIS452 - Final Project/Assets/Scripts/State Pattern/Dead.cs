@@ -5,15 +5,22 @@ using UnityEngine.UI;
 
 public class Dead : HealthStates
 {
+    private bool dead;
+    private void Start()
+    {
+        dead = false;
+    }
     public override void ChangeMovementParticle()
     {
-        movementParticles.startColor = Color.black;
-        movementParticles.emissionRate = 50;
+        ParticleSystem.MainModule settings = movementParticles.main;
+        settings.startColor = new ParticleSystem.MinMaxGradient(Color.black);
+        ParticleSystem.EmissionModule em = movementParticles.emission;
+        em.rateOverTime = 5; 
     }
 
     public override void PlayerHealed()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Should Not Be able to heal you are dead");
     }
 
     public override void TakeDamage()
@@ -27,6 +34,15 @@ public class Dead : HealthStates
             flashImage.GetComponent<Image>().color = tempColor;
             StartCoroutine(FadeImage());
         }
+
+        ChangeMovementParticle();
+
+        if (!dead)
+        {
+            dead = true;
+            FindObjectOfType<GameManager>().PlayerDied();
+        }
+       
 
     }
 }

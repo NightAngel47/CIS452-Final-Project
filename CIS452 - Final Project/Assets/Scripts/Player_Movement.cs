@@ -42,11 +42,13 @@ public class Player_Movement : MonoBehaviour
         JumpingCalculation();
         
         AnimationUpdate();
+
+        rb.velocity = new Vector2(settingVelocity.x, settingVelocity.y + rb.velocity.y);
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(settingVelocity.x, settingVelocity.y + rb.velocity.y);
+       // rb.velocity = new Vector2(settingVelocity.x, settingVelocity.y + rb.velocity.y);
     }
 
     #endregion

@@ -7,13 +7,10 @@ public class FullHealth : HealthStates
 {
     public override void ChangeMovementParticle()
     {
-        movementParticles.startColor = Color.green;
-        movementParticles.emissionRate = 5;
-    }
-
-    public override void PlayerHealed()
-    {
-        throw new System.NotImplementedException();
+        ParticleSystem.MainModule settings = movementParticles.main;
+        settings.startColor = new ParticleSystem.MinMaxGradient(Color.green);
+        ParticleSystem.EmissionModule em = movementParticles.emission;
+        em.rateOverTime = 5;
     }
 
     public override void TakeDamage()
@@ -27,5 +24,7 @@ public class FullHealth : HealthStates
             flashImage.GetComponent<Image>().color = tempColor;
             StartCoroutine(FadeImage());
         }
+
+        ChangeMovementParticle();
     }
 }

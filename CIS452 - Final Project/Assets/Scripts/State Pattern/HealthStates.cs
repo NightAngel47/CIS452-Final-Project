@@ -16,7 +16,15 @@ public abstract class HealthStates : MonoBehaviour
     }
 
     public abstract void ChangeMovementParticle();
-    public abstract void PlayerHealed();
+    public virtual void PlayerHealed()
+    {
+        ParticleSystem.MainModule settings = movementParticles.main;
+        settings.startColor = new ParticleSystem.MinMaxGradient(Color.green);
+        ParticleSystem.EmissionModule em = movementParticles.emission;
+        em.rateOverTime = 100;
+
+        StartCoroutine(HealChange());
+    }
     public abstract void TakeDamage();
 
     public IEnumerator FadeImage()
@@ -28,5 +36,11 @@ public abstract class HealthStates : MonoBehaviour
             flashImage.GetComponent<Image>().color = tempColor;
             yield return new WaitForSeconds(.05f);
         }
+    }
+
+    IEnumerator HealChange()
+    {
+        yield return new WaitForSeconds(1);
+        ChangeMovementParticle();
     }
 }
