@@ -35,7 +35,7 @@ public class Player_Equip_Invoker : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (nearTome != null)
             {
@@ -43,21 +43,25 @@ public class Player_Equip_Invoker : MonoBehaviour
                 {
                     TossTome();
                 }
-
                 currentTome = nearTome.GetComponent<TomePickup>().tome;
+
+                equipCommand.Execute();
+
+                if (tomeManager)
+                {
+
+                    Debug.Log("TomesCombined");
+                    tomeManager.Combine();
+                }
+
                 Destroy(nearTome);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            equipCommand.Execute();
-
-            if (tomeManager)
-            {
-                tomeManager.Combine();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    equipCommand.Execute();
+        //}
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
