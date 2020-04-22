@@ -10,13 +10,11 @@ public class BoxBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Projectile")
+        if(collision.gameObject.tag == "Projectile")
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

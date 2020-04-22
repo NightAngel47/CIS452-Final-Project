@@ -20,4 +20,12 @@ public class TempSpellScripts : MonoBehaviour
         yield return new WaitForSeconds(5);
         Destroy(this.gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
