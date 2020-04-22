@@ -11,10 +11,18 @@ using UnityEngine;
 
 public class EnemyWizard : EnemyTemplate
 {
+    public GameObject wiz;
+    
 
     public void Start()
     {
         enemyType = 1;  
+    }
+
+    public void Update()
+    {
+        //StartCoroutine("EnemyActions");
+        EnemyActions();
     }
 
     public override void Attack()
@@ -24,32 +32,33 @@ public class EnemyWizard : EnemyTemplate
         {
             Debug.Log("Wizard Cast Spell");
         }
+        methodCalled = false;
     }
 
-    public override void Movement()
+    public override IEnumerator Movement()
     {
         //called randomly when not aggroed
-        int rand = Random.Range(0, 100);
-        
+        int rand = Random.Range(0, 10);
 
-        if (rand <= 50)
+        if (rand <= 4)
         {
             Debug.Log("Wizard Teleported");
-            float distance = Random.Range(.25f, 1.25f);
+            float distance = Random.Range(moveMin, moveMax);
             int side = Random.Range(0, 2);
-            Debug.Log(distance);
             if (side == 0) //move right
             {
-                Debug.Log("here");
-                gameObject.transform.position = new Vector3(distance, 0, 0);
+                wiz.transform.position = new Vector3(distance, wiz.transform.position.y, 0);
                 //gameObject.transform.position = Vector3.zero;
             }
 
             if (side == 1) //move left
             {
-                Debug.Log("here2");
-                gameObject.transform.position = new Vector3(distance, 0, 0);
+                wiz.transform.position = new Vector3(distance, wiz.transform.position.y, 0);
             }
         }
+
+        float randTime = Random.Range(1, 5);
+        yield return new WaitForSeconds(randTime);
+        methodCalled = false;
     }
 }

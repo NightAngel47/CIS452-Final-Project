@@ -19,7 +19,13 @@ public abstract class EnemyTemplate : MonoBehaviour
     public LayerMask playerLayer;
     //public float health;
 
+    public float moveMin;
+    public float moveMax;
+
     public int enemyType;
+    public float attackCoolDown;
+
+    public bool methodCalled = false;
 
     public void AgroPlayer()
     {
@@ -47,28 +53,50 @@ public abstract class EnemyTemplate : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void TemplateMethod()
+    //public IEnumerator EnemyActions()
+    //{
+    //    AgroPlayer();
+
+    //    if (seePlayer == false)
+    //    {
+    //        if (enemyType == 1)
+    //        {
+    //            gameObject.transform.position = Vector3.zero;
+    //        }
+
+    //        float randTime = Random.Range(4, 10);
+    //        yield return new WaitForSeconds(randTime);
+
+    //        Movement();
+    //    }
+
+    //    if (seePlayer == true)
+    //    {
+    //        yield return new WaitForSeconds(attackCoolDown);
+    //        Attack();
+    //    }
+    //}
+
+    public void EnemyActions()
     {
         AgroPlayer();
 
-        if (seePlayer == false)
+        if (seePlayer == false && methodCalled == false)
         {
-            if(enemyType == 1)
-            {
-                gameObject.transform.position = Vector3.zero;
-            }
-            Movement();
+            methodCalled = true;
+            StartCoroutine("Movement");
         }
 
-        if (seePlayer == true)
+        if (seePlayer == true && methodCalled == false)
         {
+            methodCalled = true;
             Attack();
-        }  
+        }
 
-        
+
     }
 
     public abstract void Attack();
 
-    public abstract void Movement();
+    public abstract IEnumerator Movement();
 }

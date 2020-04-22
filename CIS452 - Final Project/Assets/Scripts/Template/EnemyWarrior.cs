@@ -11,22 +11,63 @@ using UnityEngine;
 
 public class EnemyWarrior : EnemyTemplate
 {
+    public GameObject war;
+    public bool isMoving = false;
+    public Vector3 endPos;
+    public Vector3 startPos;
+    public float speed = 1.0f;
+    public bool moveRight;
+
     public override void Attack()
     {
         if (seePlayer == true && (distanceToPlayer > attackRangeMin && distanceToPlayer < attackRangeMax))
         {
-            //Debug.Log("Warrior Attacks");
+            Debug.Log("Warrior Attacks");
         }
     }
 
-    public override void Movement()
+    public override IEnumerator Movement()
     {
-        //called randomly when not aggroed
-        int rand = Random.Range(0, 20);
+        Debug.Log("Warrior Moved Agressively");
 
-        if (rand <= 3)
+        if (isMoving == false)
         {
-            //Debug.Log("Warrior Moved Agressively");
+            moveRight = !moveRight;
+            isMoving = true;
+
+            yield return new WaitForSeconds(.1f);
+            methodCalled = false;
         }
     }
+
+    public void Update()
+    {
+        EnemyActions();
+
+        if (isMoving == true)
+        {
+            if (moveRight == true)
+            {
+                transform.Translate(2 * Time.deltaTime * speed, 0, 0);
+
+                if(transform.position.x >= endPos.x)
+                {
+                    isMoving = false;
+                    methodCalled = false;
+                }
+            }
+
+            else
+            {
+                transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
+
+                if (transform.position.x <= startPos.x)
+                {
+                    isMoving = false;
+                    methodCalled = false;
+                }
+            }
+        }
+    }
+
 }

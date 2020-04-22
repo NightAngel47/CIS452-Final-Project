@@ -14,6 +14,6 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemy.GetComponent<EnemyTemplate>().TemplateMethod();
+        //enemy.GetComponent<EnemyTemplate>().TemplateMethod();
     }
 }
