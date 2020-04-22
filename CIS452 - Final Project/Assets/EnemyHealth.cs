@@ -67,6 +67,17 @@ public class EnemyHealth : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            TakeDamage(FindObjectOfType<TomeManager>().GetDamage());
+            Destroy(collision.gameObject);
+            FindKnockDirection(collision.gameObject);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))

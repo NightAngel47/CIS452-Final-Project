@@ -75,25 +75,22 @@ public class SwarmBat : MonoBehaviour, IObserver
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player was hit by Swarm Bat!");
+            Debug.Log("Player it by Swarm Bat!");
+
             swarmBatBehavior.RemoveObserver(this);
             Destroy(this.gameObject);
 
             Debug.Log("The swarm bat also died!");
-
         }
+    }
 
-        if (other.CompareTag("Projectile"))
-        {
-            Debug.Log("Swarm bat defeated!");
-
-            swarmBatBehavior.RemoveObserver(this);
-            Destroy(this.gameObject);
-        }
+    private void OnDestroy()
+    {
+        swarmBatBehavior.RemoveObserver(this);
     }
 
 }

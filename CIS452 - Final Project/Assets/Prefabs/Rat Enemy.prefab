@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 4319853672842840632}
   - component: {fileID: 4319853672842840637}
   - component: {fileID: 7219995647693174629}
+  - component: {fileID: 9109734186357222162}
   m_Layer: 0
   m_Name: Rat Enemy
   m_TagString: Enemy
@@ -368,7 +369,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -397,8 +398,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3646828712392552584}
-  healthMax: 10
+  healthMax: 2
   knockback: 1
+--- !u!50 &9109734186357222162
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4319853672842840633}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6190399567287207322
 GameObject:
   m_ObjectHideFlags: 0
