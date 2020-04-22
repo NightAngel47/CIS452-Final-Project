@@ -61,8 +61,8 @@ public class TomeManager : MonoBehaviour
 
     private void SetUI()
     {
-        damage.text = "Current Damage: " + thisTome.GetDamage();
-        fireRate.text = "Fire Rate " + thisTome.GetRateOfFire();
-        spellSpeed.text = "Spell Speed: " + thisTome.GetSpeed();
+        //damage.text = "Current Damage: " + thisTome.GetDamage();
+        //fireRate.text = "Fire Rate " + thisTome.GetRateOfFire();
+        //spellSpeed.text = "Spell Speed: " + thisTome.GetSpeed();
     }
 }

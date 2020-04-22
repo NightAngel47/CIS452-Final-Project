@@ -4198,123 +4198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038838764}
   m_CullTransparentMesh: 0
---- !u!1 &2099228897 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
-    type: 3}
-  m_PrefabInstance: {fileID: 4101813085651166369}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2099228898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099228897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d828b2b6f1d64746a2ea82f07af8918, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 4
-  healthBar: {fileID: 1939887902}
---- !u!114 &2099228899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099228897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 142f0793b56f78b43921ae6f18b6126a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementParticles: {fileID: 2099228902}
-  flashImage: {fileID: 0}
-  tempColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &2099228900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099228897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb4a497890b7764495b2b8d0a1662e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementParticles: {fileID: 2099228902}
-  flashImage: {fileID: 0}
-  tempColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &2099228901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099228897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a1051b8821fcd5478f1a2a0cc4b0277, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementParticles: {fileID: 2099228902}
-  flashImage: {fileID: 0}
-  tempColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!198 &2099228902 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4101813084368866387, guid: fd1970adcdc07a742be43e00003a45c9,
-    type: 3}
-  m_PrefabInstance: {fileID: 4101813085651166369}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2099228903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099228897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08763ce94a9001e45af3851c03b90d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementParticles: {fileID: 2099228902}
-  flashImage: {fileID: 0}
-  tempColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!58 &2099228907
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099228897}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2
---- !u!114 &2099228908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099228897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69ba3020fbd784449b71391b8cfd8c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 2304110202523787780, guid: 5a77806d2782af147bc9b861681f667e,
-    type: 3}
-  currentSpell: {fileID: 0}
 --- !u!1 &2107587339
 GameObject:
   m_ObjectHideFlags: 0
@@ -4781,20 +4664,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1277278311851126796, guid: fd1970adcdc07a742be43e00003a45c9,
-        type: 3}
-      propertyPath: tomePickup
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: healthBar
       value: 
-      objectReference: {fileID: 1065352420873899363, guid: 0e36248b29af02c428be1826c6b5f2c4,
-        type: 3}
+      objectReference: {fileID: 1939887902}
     - target: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
         type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
-        type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4101813084368866380, guid: fd1970adcdc07a742be43e00003a45c9,
@@ -4851,31 +4727,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101813084368866382, guid: fd1970adcdc07a742be43e00003a45c9,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101813084368866383, guid: fd1970adcdc07a742be43e00003a45c9,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101813084368866387, guid: fd1970adcdc07a742be43e00003a45c9,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101813084368866387, guid: fd1970adcdc07a742be43e00003a45c9,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101813084368866387, guid: fd1970adcdc07a742be43e00003a45c9,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
