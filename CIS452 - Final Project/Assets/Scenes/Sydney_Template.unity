@@ -2378,6 +2378,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5802884501523142696, guid: 3776d9a6a66aa7c40ad5a390757a0255,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802884501523142696, guid: 3776d9a6a66aa7c40ad5a390757a0255,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8250107363615795951, guid: 3776d9a6a66aa7c40ad5a390757a0255,
         type: 3}
       propertyPath: m_Name
@@ -2623,6 +2633,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 6949878040933581859, guid: b35aead0d2066b544a12f0a6050403d4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949878040933581859, guid: b35aead0d2066b544a12f0a6050403d4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8998335782564350144, guid: b35aead0d2066b544a12f0a6050403d4,
         type: 3}
       propertyPath: playerLayer.m_Bits
@@ -2794,5 +2814,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8929441462389075218, guid: 16af1cae5fce6ed42b523d6d5ee87dc7,
         type: 3}
+    - target: {fileID: 5789817699267807966, guid: 3ab43f2dee556fc4cb7e64312d49e38c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789817699267807966, guid: 3ab43f2dee556fc4cb7e64312d49e38c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab43f2dee556fc4cb7e64312d49e38c, type: 3}
