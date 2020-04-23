@@ -100,6 +100,7 @@ public class Player_Equip_Invoker : MonoBehaviour
         if (collision.gameObject.GetComponent<TomePickup>() != null)
         {
             nearTome = collision.gameObject;
+            nearTome.GetComponent<TomePickup>().OpenPanel(true);
         }
     }
 
@@ -107,6 +108,7 @@ public class Player_Equip_Invoker : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<TomePickup>() != null)
         {
+            nearTome.GetComponent<TomePickup>().OpenPanel(false);
             nearTome = null;
         }
     }

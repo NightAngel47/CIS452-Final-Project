@@ -46,8 +46,8 @@ public class TomeManager : MonoBehaviour
 
         foreach (Tome t in Player_Equip_Invoker.tomeStack)
         {
-            thisTome = Instantiate(t);
             t.SetTome(thisTome);
+            thisTome = Instantiate(t);
         }
 
         SetUI();
