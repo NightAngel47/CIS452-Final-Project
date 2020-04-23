@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 216.3, y: 65}
+  m_SizeDelta: {x: 512.5, y: 91.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207093850
 MonoBehaviour:
@@ -401,7 +401,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 216.3, y: 65}
+  m_SizeDelta: {x: 512.5, y: 91.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839131232
 MonoBehaviour:
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 8.5625
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 975200410}
   m_TextComponent: {fileID: 1195317573}
   m_materialReferenceIndex: 1
@@ -622,11 +622,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 20f3905db41e7b749b2fe5d8cc9ea17b, type: 3}
-    m_FontSize: 26
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 64
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -677,7 +677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000073433, y: 288}
+  m_AnchoredPosition: {x: -0.000073433, y: 260}
   m_SizeDelta: {x: 1600, y: 290.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195317573
@@ -698,11 +698,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Super Dungeon Delver VIII Redux 2: Clearing the Dungeon for My nExT oF
-    KIn!? DX Java HTML5 Version (snapshot 2.112b) Gold Edition - Early Access Z'
+  m_text: '<color=red>Super  Dungeon  Delver  VIII</color> \nRedux 2: Clearing  the 
+    Dungeon  for  My  nExT  oF  KIn! \n DX  Java  HTML5  Version  (snapshot 2.112b)\n
+    <color=yellow>Gold  Edition - <color=green>Early Access Z'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 00e7109ba00f4a940a878fc61c5749c7, type: 2}
-  m_sharedMaterial: {fileID: 3599637568100238964, guid: 00e7109ba00f4a940a878fc61c5749c7,
+  m_fontAsset: {fileID: 11400000, guid: 5117f6f2335a95e4d8746db59d1f5a36, type: 2}
+  m_sharedMaterial: {fileID: 845800872097378719, guid: 5117f6f2335a95e4d8746db59d1f5a36,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -728,13 +729,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 69.1
-  m_fontSizeBase: 69.1
+  m_fontSize: 61.49
+  m_fontSizeBase: 61.49
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -745,7 +746,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 138
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -769,9 +770,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1195317573}
-    characterCount: 146
+    characterCount: 164
     spriteCount: 0
-    spaceCount: 25
+    spaceCount: 44
     wordCount: 27
     linkCount: 0
     lineCount: 4
@@ -920,11 +921,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 20f3905db41e7b749b2fe5d8cc9ea17b, type: 3}
-    m_FontSize: 26
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 64
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -990,13 +991,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3a587b06bb683564681e2215afe37747, type: 3}
-  m_Type: 0
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
