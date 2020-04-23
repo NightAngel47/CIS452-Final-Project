@@ -553,7 +553,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 8.5625
   m_canvasRenderer: {fileID: 975200410}
   m_TextComponent: {fileID: 1195317573}
   m_materialReferenceIndex: 1
@@ -702,8 +702,8 @@ MonoBehaviour:
     Dungeon  for  My  nExT  oF  KIn! \n DX  Java  HTML5  Version  (snapshot 2.112b)\n
     <color=yellow>Gold  Edition - <color=green>Early Access Z'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5117f6f2335a95e4d8746db59d1f5a36, type: 2}
-  m_sharedMaterial: {fileID: 845800872097378719, guid: 5117f6f2335a95e4d8746db59d1f5a36,
+  m_fontAsset: {fileID: 11400000, guid: 00e7109ba00f4a940a878fc61c5749c7, type: 2}
+  m_sharedMaterial: {fileID: 3599637568100238964, guid: 00e7109ba00f4a940a878fc61c5749c7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
