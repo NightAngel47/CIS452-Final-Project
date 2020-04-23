@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5429076013248826261}
   m_Layer: 0
   m_Name: Wizard Enemy
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4886,5 +4886,10 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
+  moveMin: 0
+  moveMax: 0
   enemyType: 0
+  attackCoolDown: 0
+  methodCalled: 0
+  projectilePrefab: {fileID: 0}
   wiz: {fileID: 0}

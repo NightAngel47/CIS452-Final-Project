@@ -18,19 +18,31 @@ public class EnemyArcher : EnemyTemplate
     public float speed = 1.0f;
     public bool moveRight;
 
+    private bool shootOnce = false;
+
+
     public override void Attack()
     {
-        if (seePlayer == true && distanceToPlayer > attackRangeMin)
+        if (seePlayer == true) //&& distanceToPlayer > attackRangeMin
         {
-           // Debug.Log("Archer Shoots Arrow");
+            // Debug.Log("Archer Shoots Arrow");
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            StartCoroutine("WaitTimeAttack");
         }
+
+    }
+
+    IEnumerator WaitTimeAttack()
+    {
+        yield return new WaitForSeconds(2f);
+        shootOnce = false;
+        methodCalled = false;
     }
 
     public override IEnumerator Movement()
     {
         //called randomly when not aggroed
         int rand = Random.Range(0, 10);
-        Debug.Log(rand);
 
         if (rand <= 4)
         {

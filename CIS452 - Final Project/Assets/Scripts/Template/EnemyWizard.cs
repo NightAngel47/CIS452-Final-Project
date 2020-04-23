@@ -12,7 +12,8 @@ using UnityEngine;
 public class EnemyWizard : EnemyTemplate
 {
     public GameObject wiz;
-    
+
+    private bool shootOnce = false;
 
     public void Start()
     {
@@ -27,11 +28,20 @@ public class EnemyWizard : EnemyTemplate
 
     public override void Attack()
     {
-        
-        if(seePlayer == true && distanceToPlayer > attackRangeMin)
+        if(shootOnce == false) //seePlayer == true&& distanceToPlayer > attackRangeMin
         {
             Debug.Log("Wizard Cast Spell");
+            shootOnce = true;
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            StartCoroutine("WaitTime");
         }
+        
+    }
+
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(2f);
+        shootOnce = false;
         methodCalled = false;
     }
 

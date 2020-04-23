@@ -27,6 +27,8 @@ public abstract class EnemyTemplate : MonoBehaviour
 
     public bool methodCalled = false;
 
+    public GameObject projectilePrefab;
+
     public void AgroPlayer()
     {
         RaycastHit2D playerCheck;

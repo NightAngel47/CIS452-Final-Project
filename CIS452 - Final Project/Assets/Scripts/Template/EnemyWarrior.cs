@@ -18,12 +18,25 @@ public class EnemyWarrior : EnemyTemplate
     public float speed = 1.0f;
     public bool moveRight;
 
+    private bool shootOnce = false;
+
+
     public override void Attack()
     {
-        if (seePlayer == true && (distanceToPlayer > attackRangeMin && distanceToPlayer < attackRangeMax))
+        if (seePlayer == true) //&& (distanceToPlayer > attackRangeMin && distanceToPlayer < attackRangeMax)
         {
             Debug.Log("Warrior Attacks");
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            StartCoroutine("WaitTime");
         }
+
+    }
+
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(2f);
+        shootOnce = false;
+        methodCalled = false;
     }
 
     public override IEnumerator Movement()

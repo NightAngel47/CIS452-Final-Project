@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8998335782564350144}
   m_Layer: 0
   m_Name: Archer Enemy
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4882,3 +4882,19 @@ MonoBehaviour:
   distanceToPlayer: 0
   attackRangeMin: 0
   attackRangeMax: 0
+  castRadius: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  moveMin: 0
+  moveMax: 0
+  enemyType: 0
+  attackCoolDown: 0
+  methodCalled: 0
+  projectilePrefab: {fileID: 0}
+  arc: {fileID: 0}
+  isMoving: 0
+  endPos: {x: 0, y: 0, z: 0}
+  startPos: {x: 0, y: 0, z: 0}
+  speed: 1
+  moveRight: 0
