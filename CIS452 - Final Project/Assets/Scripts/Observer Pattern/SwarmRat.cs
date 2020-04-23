@@ -16,6 +16,9 @@ public class SwarmRat : MonoBehaviour, IObserver
     private SpriteRenderer rend;
     private Color defaultColor;
     private bool chasingPlayer;
+    private GameObject player;
+
+    public float minRange = 10f;
 
     public void UpdateData(bool inChaseMode, float movementSpeed, float jumpHeight, Color color, float damageRate, float damageStrength)
     {
@@ -40,12 +43,14 @@ public class SwarmRat : MonoBehaviour, IObserver
         rend = GetComponent<SpriteRenderer>();
         swarmRatBehavior.RegisterObserver(this);
         chasingPlayer = false;
+        player = FindObjectOfType<Player_Movement>().gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
         ChangeColor(defaultColor);
+        CheckPlayerDistance();
     }
 
     void OnEnable()
@@ -73,6 +78,22 @@ public class SwarmRat : MonoBehaviour, IObserver
         rend.material.SetColor("_Color", defaultColor);
     }
 
+    private void CheckPlayerDistance()
+    {
+        Vector3 playerPos = transform.position - player.transform.position;
+
+        if (playerPos.x < minRange && playerPos.x > -minRange && playerPos.y < minRange && playerPos.y > -minRange)
+        {
+            swarmRatBehavior.chasingPlayer = true;
+            swarmRatBehavior.NotifyObservers();
+        }
+        else if (playerPos.x > minRange && playerPos.x < -minRange && playerPos.y > minRange && playerPos.y < -minRange)
+        {
+            swarmRatBehavior.chasingPlayer = false;
+            swarmRatBehavior.NotifyObservers();
+        }
+    }
+
     private IEnumerator JumpTowardsPlayer(float movementSpeed, float jumpHeight)
     {
         Debug.Log("Rat jumping at player at the speed of : " + movementSpeed + " with a height of " + jumpHeight + "! ");
@@ -87,6 +108,22 @@ public class SwarmRat : MonoBehaviour, IObserver
     private IEnumerator IdleMovement(float jumpHeight)
     {
         Debug.Log("Rat idling, and jumping occasionally at a height of " + jumpHeight + " because its a Rat! ");
+
+        if (gameObject.activeSelf && gameObject != null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, jumpHeight);
+        }
+
+        if (gameObject.activeSelf && gameObject != null)
+        {
+            float willJump = Random.Range(0, 100);
+
+            if (willJump < 50)
+            {
+                transform.Translate(0, jumpHeight, 0);
+            }
+        }
+
         yield return new WaitForSeconds(1f);
 
         if (!chasingPlayer)
