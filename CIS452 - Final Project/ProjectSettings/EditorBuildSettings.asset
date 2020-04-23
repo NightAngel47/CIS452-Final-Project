@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Steven_Simple_Factory.unity
     guid: cdd0cbd064fc2bf44be6c9f85247206e
+  - enabled: 1
+    path: Assets/Scenes/Level_Playtest_1.unity
+    guid: 2e43626861ea1c542829ce96dc82a646
   m_configObjects: {}
