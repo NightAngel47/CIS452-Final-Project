@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\sjdro\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\sjdro\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_CIS452 - Final Project.-1019399354.00" t="ExcludeRecursive" />
+    <e p="C:\Users\sjdro\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\sjdro\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_CIS452 - Final Project.-1019399354.00" t="ExcludeRecursive" />
     <e p="D:\GitHub\CIS452-Final-Project\CIS452 - Final Project" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Art" t="Include">
+          <e p="pizzadudedotdk.txt" t="Include" />
+        </e>
+        <e p="EnemyHealth.cs" t="Include" />
+        <e p="ObjectPooler.cs" t="Include" />
+        <e p="Pool.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="BoxBehaviour.cs" t="Include" />
           <e p="Command Pattern" t="Include">
             <e p="Command.cs" t="Include" />
             <e p="EquipCommand.cs" t="Include" />
@@ -20,6 +27,7 @@
             <e p="TempSpellScripts.cs" t="Include" />
             <e p="TomeManager.cs" t="Include" />
           </e>
+          <e p="GameManager.cs" t="Include" />
           <e p="Observer Pattern" t="Include">
             <e p="IObserver.cs" t="Include" />
             <e p="ISubject.cs" t="Include" />
@@ -28,9 +36,17 @@
             <e p="SwarmRat.cs" t="Include" />
           </e>
           <e p="Player_Movement.cs" t="Include" />
+          <e p="PlayerHealth.cs" t="Include" />
           <e p="Simple Factory" t="Include">
             <e p="EnemyFactory.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
+          </e>
+          <e p="State Pattern" t="Include">
+            <e p="Dead.cs" t="Include" />
+            <e p="FullHealth.cs" t="Include" />
+            <e p="HalfHealth.cs" t="Include" />
+            <e p="HealthStates.cs" t="Include" />
+            <e p="QuarterHealth.cs" t="Include" />
           </e>
           <e p="Temp.cs" t="Include" />
           <e p="Template" t="Include">
@@ -38,11 +54,16 @@
             <e p="EnemyTemplate.cs" t="Include" />
             <e p="EnemyWarrior.cs" t="Include" />
             <e p="EnemyWizard.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
           </e>
           <e p="TestSwitchScene.cs" t="Include" />
           <e p="Tome.cs" t="Include" />
           <e p="TomePickup.cs" t="Include" />
         </e>
+        <e p="Sfx" t="Include">
+          <e p="License.txt" t="Include" />
+        </e>
+        <e p="SpawnEnemy.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -69,6 +90,11 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="UI" t="Include">
+          <e p="Controller Prompts" t="Include">
+            <e p="Readme.txt" t="Include" />
           </e>
         </e>
       </e>
