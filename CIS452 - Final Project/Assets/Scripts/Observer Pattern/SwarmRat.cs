@@ -48,6 +48,26 @@ public class SwarmRat : MonoBehaviour, IObserver
         ChangeColor(defaultColor);
     }
 
+    void OnEnable()
+    {
+        swarmRatBehavior = FindObjectOfType<SwarmBehaviorData>();
+
+        if (this.gameObject != null)
+        {
+            swarmRatBehavior.RegisterObserver(this);
+        }
+    }
+
+    void OnDisable()
+    {
+        swarmRatBehavior = FindObjectOfType<SwarmBehaviorData>();
+
+        if (this.gameObject != null)
+        {
+            swarmRatBehavior.RemoveObserver(this);
+        }
+    }
+
     private void ChangeColor(Color defaultColor)
     {
         rend.material.SetColor("_Color", defaultColor);
@@ -82,14 +102,10 @@ public class SwarmRat : MonoBehaviour, IObserver
             Debug.Log("Player it by Swarm Bat!");
 
             swarmRatBehavior.RemoveObserver(this);
-            Destroy(this.gameObject);
+            ObjectPooler.instance.ReturnObjectToPool("Rat", gameObject);
+            //Destroy(this.gameObject);
 
             Debug.Log("The swarm bat also died!");
         }
-    }
-
-    private void OnDestroy()
-    {
-        swarmRatBehavior.RemoveObserver(this);
     }
 }

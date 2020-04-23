@@ -38,7 +38,7 @@ public class SwarmBat : MonoBehaviour, IObserver
     {
         swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
         rend = GetComponent<SpriteRenderer>();
-        swarmBatBehavior.RegisterObserver(this);
+        //swarmBatBehavior.RegisterObserver(this);
         chasingPlayer = false;
     }
 
@@ -46,6 +46,26 @@ public class SwarmBat : MonoBehaviour, IObserver
     void Update()
     {
         ChangeColor(defaultColor);
+    }
+
+    void OnEnable()
+    {
+        swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
+
+        if(this.gameObject != null)
+        {
+            swarmBatBehavior.RegisterObserver(this);
+        }
+    }
+
+    void OnDisable()
+    {
+        swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
+
+        if(this.gameObject != null)
+        {
+            swarmBatBehavior.RemoveObserver(this);
+        }
     }
 
     private void ChangeColor(Color defaultColor)
@@ -82,15 +102,12 @@ public class SwarmBat : MonoBehaviour, IObserver
             Debug.Log("Player it by Swarm Bat!");
 
             swarmBatBehavior.RemoveObserver(this);
-            Destroy(this.gameObject);
+            ObjectPooler.instance.ReturnObjectToPool("Bat", gameObject);
+
+            //swarmBatBehavior.RemoveObserver(this);
+            //Destroy(this.gameObject);
 
             Debug.Log("The swarm bat also died!");
         }
     }
-
-    private void OnDestroy()
-    {
-        swarmBatBehavior.RemoveObserver(this);
-    }
-
 }

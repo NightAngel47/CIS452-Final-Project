@@ -64,7 +64,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Death()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 
 
@@ -73,7 +73,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             TakeDamage(FindObjectOfType<TomeManager>().GetDamage());
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             FindKnockDirection(collision.gameObject);
         }
     }
@@ -83,7 +83,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             TakeDamage(FindObjectOfType<TomeManager>().GetDamage());
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             FindKnockDirection(collision.gameObject);
         }
     }
