@@ -46,7 +46,6 @@ public class EnemyHealth : MonoBehaviour
         healthBar.value = currentHealth;
         StartCoroutine(DamageFlash());
 
-
         if (currentHealth <= 0)
         {
             Death();
@@ -64,7 +63,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Death()
     {
-        //Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 
 

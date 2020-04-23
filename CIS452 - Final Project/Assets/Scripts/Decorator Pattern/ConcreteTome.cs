@@ -13,7 +13,7 @@ public class ConcreteTome : BaseTome
 {
     public override int GetDamage()
     {
-        return 0;
+        return 1;
     }
 
     public override float GetRateOfFire()
