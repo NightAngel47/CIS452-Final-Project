@@ -35,7 +35,7 @@ namespace Simple_Factory
         private IEnumerator SpawnEnemy()
         {
             spawnPos = transform.position;
-            Instantiate(enemyFactory.EnemyToSpawn(enemyType), spawnPos, Quaternion.identity);
+            //Instantiate(enemyFactory.EnemyToSpawn(enemyType), spawnPos, Quaternion.identity);
             yield return new WaitForSeconds(Random.Range(minSpawnRate, maxSpawnRate));
             StartCoroutine(SpawnEnemy());
         }
