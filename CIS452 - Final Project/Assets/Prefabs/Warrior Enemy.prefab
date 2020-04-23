@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7419127788590919893}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5964672800070972633}
   - component: {fileID: 5628246843093806380}
   - component: {fileID: 8809502696389565290}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 5802884501523142696}
   - component: {fileID: 9160901302021684829}
   - component: {fileID: 8531888698470904877}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536007242321001266}
   - component: {fileID: 4249279416447694641}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 1058383055178750652}
   - component: {fileID: 5132621419384678796}
   - component: {fileID: 4309268424785020978}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 3833810410426725591}
   - component: {fileID: 8484060703442862286}
   - component: {fileID: -3628946776325874746}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Warrior Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 6385394089234657200, guid: fd15d875ea2e8844f9fbc825187ca842,
     type: 3}
-  m_Color: {r: 1, g: 0.2971698, b: 0.2971698, a: 1}
+  m_Color: {r: 0.6750498, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5253,20 +5253,21 @@ MonoBehaviour:
   distanceToPlayer: 0
   attackRangeMin: 0
   attackRangeMax: 0
-  castRadius: 0
+  castRadius: 5
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  moveMin: 0
-  moveMax: 0
-  enemyType: 0
+    m_Bits: 512
+  moveMin: 0.1
+  moveMax: 2
+  enemyType: 2
   attackCoolDown: 0
   methodCalled: 0
-  projectilePrefab: {fileID: 0}
-  war: {fileID: 0}
+  projectilePrefab: {fileID: 4783680214934893700, guid: aa1d9505d984a83418de463e9e36cd21,
+    type: 3}
+  war: {fileID: 8250107363615795951}
   isMoving: 0
-  endPos: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 5.8, y: -2.49, z: 0}
+  startPos: {x: -2, y: -2.49, z: 0}
   speed: 1
   moveRight: 0
 --- !u!114 &-3628946776325874746

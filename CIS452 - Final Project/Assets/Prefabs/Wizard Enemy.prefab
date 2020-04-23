@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8521494726016603766}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 143350697695873772}
   - component: {fileID: 5429076013248826261}
   - component: {fileID: 6298022320093223749}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wizard Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,17 +4920,18 @@ MonoBehaviour:
   distanceToPlayer: 0
   attackRangeMin: 0
   attackRangeMax: 0
-  castRadius: 0
+  castRadius: 5
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  moveMin: 0
-  moveMax: 0
-  enemyType: 0
+    m_Bits: 512
+  moveMin: 0.1
+  moveMax: 2
+  enemyType: 1
   attackCoolDown: 0
   methodCalled: 0
-  projectilePrefab: {fileID: 0}
-  wiz: {fileID: 0}
+  projectilePrefab: {fileID: 8929441462389075218, guid: 16af1cae5fce6ed42b523d6d5ee87dc7,
+    type: 3}
+  wiz: {fileID: 143350697695873783}
 --- !u!114 &6298022320093223749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4956,7 +4957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3806613981036176320}
   - component: {fileID: 1438632631681510763}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5045,7 +5046,7 @@ GameObject:
   - component: {fileID: 6337867444549344636}
   - component: {fileID: 8732384868018161226}
   - component: {fileID: 448313020073909335}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5119,7 +5120,7 @@ GameObject:
   - component: {fileID: 6296860271067953886}
   - component: {fileID: 5107648616430028295}
   - component: {fileID: 3168749535567787970}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5217,7 +5218,7 @@ GameObject:
   - component: {fileID: 5789817699267807966}
   - component: {fileID: 993807929378730261}
   - component: {fileID: 4707545403349375764}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

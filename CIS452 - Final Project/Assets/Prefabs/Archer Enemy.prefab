@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8218944515675352063}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2015353609746694216}
   - component: {fileID: 2541767755465501117}
   - component: {fileID: 2488393378608826881}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 8274461894490690879}
   - component: {fileID: 8998335782564350144}
   - component: {fileID: -678935840247057885}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Archer Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4993,20 +4993,21 @@ MonoBehaviour:
   distanceToPlayer: 0
   attackRangeMin: 0
   attackRangeMax: 0
-  castRadius: 0
+  castRadius: 5
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   moveMin: 0
   moveMax: 0
   enemyType: 0
   attackCoolDown: 0
   methodCalled: 0
-  projectilePrefab: {fileID: 0}
-  arc: {fileID: 0}
+  projectilePrefab: {fileID: 5385194981257643037, guid: 7107658fefb5ef2488c8a8dd56b355c9,
+    type: 3}
+  arc: {fileID: 4410086712674848062}
   isMoving: 0
-  endPos: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 5, y: -2.49, z: 0}
+  startPos: {x: 0, y: -2.49, z: 0}
   speed: 1
   moveRight: 0
 --- !u!114 &-678935840247057885
@@ -5035,7 +5036,7 @@ GameObject:
   - component: {fileID: 6949878040933581859}
   - component: {fileID: 1072594328592806183}
   - component: {fileID: 1202619945917603089}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5109,7 +5110,7 @@ GameObject:
   - component: {fileID: 6656313715911976670}
   - component: {fileID: 813734312176718065}
   - component: {fileID: 683139973227401032}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5206,7 +5207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3733852533411003045}
   - component: {fileID: 2094414657041361771}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
