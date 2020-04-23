@@ -100,9 +100,8 @@ public class SwarmBat : MonoBehaviour, IObserver
 
         //transform.Translate(2 * Time.deltaTime * movementSpeed, 2 * Time.deltaTime * movementSpeed, 0);
         
-        if(gameObject != null && gameObject.activeSelf)
+        if(gameObject != null && gameObject.activeSelf && player != null)
         {
-            player = FindObjectOfType<Player_Movement>().gameObject;
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movementSpeed * 0.002f);
         }
 

@@ -109,12 +109,12 @@ public class SwarmRat : MonoBehaviour, IObserver
     {
         Debug.Log("Rat idling, and jumping occasionally at a height of " + jumpHeight + " because its a Rat! ");
 
-        if (gameObject.activeSelf && gameObject != null)
+        if (gameObject.activeSelf && gameObject != null && player != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, jumpHeight);
         }
 
-        if (gameObject.activeSelf && gameObject != null)
+        if (gameObject.activeSelf && gameObject != null && player != null)
         {
             float willJump = Random.Range(0, 100);
 
