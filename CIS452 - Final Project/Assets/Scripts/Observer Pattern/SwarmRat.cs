@@ -96,7 +96,7 @@ public class SwarmRat : MonoBehaviour, IObserver
 
     private IEnumerator JumpTowardsPlayer(float movementSpeed, float jumpHeight)
     {
-        Debug.Log("Rat jumping at player at the speed of : " + movementSpeed + " with a height of " + jumpHeight + "! ");
+        //Debug.Log("Rat jumping at player at the speed of : " + movementSpeed + " with a height of " + jumpHeight + "! ");
         yield return new WaitForSeconds(1f);
 
         if (chasingPlayer)
@@ -107,7 +107,7 @@ public class SwarmRat : MonoBehaviour, IObserver
 
     private IEnumerator IdleMovement(float jumpHeight)
     {
-        Debug.Log("Rat idling, and jumping occasionally at a height of " + jumpHeight + " because its a Rat! ");
+        //Debug.Log("Rat idling, and jumping occasionally at a height of " + jumpHeight + " because its a Rat! ");
 
         if (gameObject.activeSelf && gameObject != null && player != null)
         {
