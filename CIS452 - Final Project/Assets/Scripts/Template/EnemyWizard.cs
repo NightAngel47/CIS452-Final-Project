@@ -15,11 +15,6 @@ public class EnemyWizard : EnemyTemplate
 
     private bool shootOnce = false;
 
-    public void Start()
-    {
-        enemyType = 1;  
-    }
-
     public void Update()
     {
         //StartCoroutine("EnemyActions");

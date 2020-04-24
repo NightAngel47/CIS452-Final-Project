@@ -18,8 +18,6 @@ public class EnemyWarrior : EnemyTemplate
     public float speed = 1.0f;
     public bool moveRight;
 
-    private bool shootOnce = false;
-
 
     public override void Attack()
     {
@@ -35,7 +33,6 @@ public class EnemyWarrior : EnemyTemplate
     IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(2f);
-        shootOnce = false;
         methodCalled = false;
     }
 

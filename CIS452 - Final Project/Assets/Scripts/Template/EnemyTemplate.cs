@@ -22,9 +22,6 @@ public abstract class EnemyTemplate : MonoBehaviour
     public float moveMin;
     public float moveMax;
 
-    public int enemyType;
-    public float attackCoolDown;
-
     public bool methodCalled = false;
 
     public GameObject projectilePrefab;
