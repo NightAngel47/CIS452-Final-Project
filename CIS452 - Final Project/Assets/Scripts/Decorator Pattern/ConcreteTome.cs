@@ -23,6 +23,6 @@ public class ConcreteTome : BaseTome
 
     public override float GetSpeed()
     {
-        return 10;
+        return 5;
     }
 }
