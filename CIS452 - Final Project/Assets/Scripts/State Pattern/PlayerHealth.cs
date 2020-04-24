@@ -1,8 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
 /*
 * Levi Schoof
 * PlayerHealth.cs
@@ -10,6 +6,11 @@ using UnityEngine.UI;
 * Handels the player's health and taking damage.
 * Also handles/uses the health states
 */
+
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerHealth : MonoBehaviour
 {

@@ -6768,6 +6768,14 @@ PrefabInstance:
       propertyPath: maxInvinceTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2099228908, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 287035417}
+    - target: {fileID: 2099228908, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: shootingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e505e99fbaf8308438bdff39022e875b, type: 3}
     - target: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
         type: 3}
       propertyPath: m_Name
