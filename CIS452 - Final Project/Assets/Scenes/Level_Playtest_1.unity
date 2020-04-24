@@ -20268,7 +20268,7 @@ PrefabInstance:
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
@@ -20497,7 +20497,7 @@ PrefabInstance:
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
@@ -20646,7 +20646,7 @@ PrefabInstance:
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
@@ -21514,6 +21514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: World Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049982103031267815, guid: 5c99823689115ee4e8b4e019aa1066f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4049982103046246592, guid: 5c99823689115ee4e8b4e019aa1066f2,
         type: 3}
