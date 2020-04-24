@@ -8,18 +8,20 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public GameObject losePanel;
+    private PauseManager pauseManager;
 
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1;
         losePanel.SetActive(false);
+        pauseManager = FindObjectOfType<PauseManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && losePanel.activeSelf)
+        if (pauseManager.gameLost && Input.GetKeyDown(KeyCode.R) && losePanel.activeSelf)
         {
             ResartGame();
         }
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeInLoseScrean()
     {
+        pauseManager.gameLost = true;
         losePanel.SetActive(true);
         Color tempColor = losePanel.transform.GetComponentInChildren<Image>().color;
         Color textColor = new Color();
