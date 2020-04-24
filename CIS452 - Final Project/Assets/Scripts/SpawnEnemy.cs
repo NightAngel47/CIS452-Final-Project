@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+* William Nomikos, Steven Drovie
+* SpawnEnemy.cs
+* Final Project
+* Activates enemies from the object pool at the spawner's position.
+*/
+
 public class SpawnEnemy : MonoBehaviour
 {
     public string enemyType;

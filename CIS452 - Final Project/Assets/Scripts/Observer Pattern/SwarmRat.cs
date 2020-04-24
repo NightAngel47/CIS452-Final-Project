@@ -13,8 +13,6 @@ public class SwarmRat : MonoBehaviour, IObserver
 {
     private SwarmBehaviorData swarmRatBehavior;
 
-    private SpriteRenderer rend;
-    private Color defaultColor;
     private bool chasingPlayer;
     private GameObject player;
 
@@ -38,7 +36,6 @@ public class SwarmRat : MonoBehaviour, IObserver
     void Start()
     {
         swarmRatBehavior = FindObjectOfType<SwarmBehaviorData>();
-        rend = GetComponent<SpriteRenderer>();
         swarmRatBehavior.RegisterObserver(this);
         chasingPlayer = false;
         player = FindObjectOfType<Player_Movement>().gameObject;
@@ -68,11 +65,6 @@ public class SwarmRat : MonoBehaviour, IObserver
         {
             swarmRatBehavior.RemoveObserver(this);
         }
-    }
-
-    private void ChangeColor(Color defaultColor)
-    {
-        //rend.material.SetColor("_Color", defaultColor);
     }
 
     private void CheckPlayerDistance()
@@ -110,8 +102,6 @@ public class SwarmRat : MonoBehaviour, IObserver
 
     private IEnumerator IdleMovement(float moveSpeed)
     {
-        //Debug.Log("Rat idling, and jumping occasionally at a height of " + jumpHeight + " because its a Rat! ");
-
         if (gameObject.activeSelf && gameObject != null && player != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
@@ -140,18 +130,4 @@ public class SwarmRat : MonoBehaviour, IObserver
         swarmRatBehavior.RemoveObserver(this);
         ObjectPooler.instance.ReturnObjectToPool("Bat", gameObject);
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        Debug.Log("Player it by Swarm Bat!");
-
-    //        swarmRatBehavior.RemoveObserver(this);
-    //        ObjectPooler.instance.ReturnObjectToPool("Rat", gameObject);
-    //        //Destroy(this.gameObject);
-
-    //        Debug.Log("The swarm bat also died!");
-    //    }
-    //}
 }

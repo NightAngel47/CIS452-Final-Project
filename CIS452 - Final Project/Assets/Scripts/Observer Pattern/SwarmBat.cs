@@ -14,8 +14,6 @@ public class SwarmBat : MonoBehaviour, IObserver
 {
     private SwarmBehaviorData swarmBatBehavior;
 
-    private SpriteRenderer rend;
-    private Color defaultColor;
     private bool chasingPlayer;
     private GameObject player;
 
@@ -41,8 +39,6 @@ public class SwarmBat : MonoBehaviour, IObserver
     {
         moveTowardsPlayerCoroutineRunning = false;
         swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
-        rend = GetComponent<SpriteRenderer>();
-        //swarmBatBehavior.RegisterObserver(this);
         chasingPlayer = false;
         player = FindObjectOfType<Player_Movement>().gameObject;
     }
@@ -50,7 +46,6 @@ public class SwarmBat : MonoBehaviour, IObserver
     // Update is called once per frame
     void Update()
     {
-        ChangeColor(defaultColor);
         CheckPlayerDistance();
     }
 
@@ -74,11 +69,6 @@ public class SwarmBat : MonoBehaviour, IObserver
         }
     }
 
-    private void ChangeColor(Color defaultColor)
-    {
-        //rend.material.SetColor("_Color", defaultColor);
-    }
-
     private void CheckPlayerDistance()
     {
         Vector3 playerPos = transform.position - player.transform.position;
@@ -98,10 +88,6 @@ public class SwarmBat : MonoBehaviour, IObserver
     private IEnumerator MoveTowardsPlayer(float movementSpeed)
     {
         moveTowardsPlayerCoroutineRunning = true;
-
-        //Debug.Log("Bat moving towards player at the speed of : " + movementSpeed + "! ");
-
-        //transform.Translate(2 * Time.deltaTime * movementSpeed, 2 * Time.deltaTime * movementSpeed, 0);
 
         if (chasingPlayer)
         {
@@ -133,20 +119,4 @@ public class SwarmBat : MonoBehaviour, IObserver
         swarmBatBehavior.RemoveObserver(this);
         ObjectPooler.instance.ReturnObjectToPool("Bat", gameObject);
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        Debug.Log("Player it by Swarm Bat!");
-
-    //        swarmBatBehavior.RemoveObserver(this);
-    //        ObjectPooler.instance.ReturnObjectToPool("Bat", gameObject);
-
-    //        //swarmBatBehavior.RemoveObserver(this);
-    //        //Destroy(this.gameObject);
-
-    //        Debug.Log("The swarm bat also died!");
-    //    }
-    //}
 }
