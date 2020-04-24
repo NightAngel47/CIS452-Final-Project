@@ -55,14 +55,14 @@ public class SwarmBehaviorData : MonoBehaviour, ISubject
     {
         foreach (IObserver observer in observerList)
         {
-            observer.UpdateData(chasingPlayer, moveSpeed, jumpHeight, color, rateOfDamage, damageStrength);
+            observer.UpdateData(chasingPlayer, moveSpeed);
         }
     }
 
     public void RegisterObserver(IObserver observer)
     {
         observerList.Add(observer);
-        observer.UpdateData(chasingPlayer, moveSpeed, jumpHeight, color, rateOfDamage, damageStrength);
+        observer.UpdateData(chasingPlayer, moveSpeed);
     }
 
     public void RemoveObserver(IObserver observer)
