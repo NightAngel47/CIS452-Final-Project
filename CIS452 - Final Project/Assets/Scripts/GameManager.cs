@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+* Levi Schoof
+* GameManager.cs
+* Final Project
+* Handels the losing of the game and the restarting of game
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

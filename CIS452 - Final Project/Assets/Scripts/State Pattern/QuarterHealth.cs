@@ -1,15 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-/*
+﻿/*
 * Levi Schoof
 * QuarterHealth.cs
 * Final Project
 * Implaments the HealthStates abstract classs
 * The health stats that is used when the player is at a Quarter Health
 */
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
 
 public class QuarterHealth : HealthStates
 {

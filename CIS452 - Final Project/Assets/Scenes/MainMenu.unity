@@ -1593,8 +1593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.3125, y: 9.1}
-  m_SizeDelta: {x: 1585.4, y: 549}
+  m_AnchoredPosition: {x: 0.0061831, y: 21.6}
+  m_SizeDelta: {x: 1600, y: 524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1612424261
 MonoBehaviour:
@@ -1614,36 +1614,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Artega Patrick, <i>Ruined Planet</i>, patrickdearteaga.com
-
-    Artega
-    Patrick, <i>Dreaming </i>, patrickdearteaga.com
-
-    Artega Patrick, <i>Heroic
-    Intrusion </i>, patrickdearteaga.com
-
-    Artega Patrick, <i>Child''s Nightmare</i>,
-    patrickdearteaga.com
-
-    Artega Patrick, <i>Voices From Heaven</i>, patrickdearteaga.com
-
-    Artega
-    Patrick, <i>Point of Clash</i>, patrickdearteaga.com
-
-
-    This Game uses these
-    sounds from freesound:
-
-    Button Click 2 by "Mellau" ( https://freesound.org/people/Mellau/sounds/506053/:)
-
-    Fireball
-    Explosion by "HighPixel" (https://freesound.org/s/431174/)
-
-    PickupBook1 by
-    "jomse" (https://freesound.org/people/jomse/sounds/428666/)
-
-    Tearing,Paper
-    by "InspectorJ" (https://freesound.org/s/415766/)'
+  m_text: "Artega Patrick, <i>Ruined Planet</i>, patrickdearteaga.com\nArtega Patrick,
+    <i>Dreaming </i>, patrickdearteaga.com\nArtega Patrick, <i>Heroic Intrusion </i>,
+    patrickdearteaga.com\nArtega Patrick, <i>Child's Nightmare</i>, patrickdearteaga.com\nArtega
+    Patrick, <i>Voices From Heaven</i>, patrickdearteaga.com\nArtega Patrick, <i>Point
+    of Clash</i>, patrickdearteaga.com\n\nThis Game uses these sounds from freesound:\nButton
+    Click 2 by \"Mellau\" ( https://freesound.org/people/Mellau/sounds/506053/:)\nFireball
+    Explosion by \"HighPixel\" (https://freesound.org/s/431174/)\nPickupBook1 by
+    \"jomse\" (https://freesound.org/people/jomse/sounds/428666/)\nTearing,Paper
+    by \"InspectorJ\" (https://freesound.org/s/415766/)\nhiss3 by \"Reitanna\" (https://freesound.org/people/Reitanna/sounds/343928/)\nModulated
+    \xBB Squeak FX by \"Motion_S\" (https://freesound.org/people/Motion_S/sounds/177849/)\nAnvil
+    by \"blevesque4\" (https://freesound.org/s/333608/)\nhomemade stabs and such
+    \xBB SQUEEGEE. by \"THE_bizniss\" (https://freesound.org/s/39525/)\nWood \xBB
+    Sticks by \"Agaxly\" (https://freesound.org/s/348959/)\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1671,8 +1654,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26.3
+  m_fontSizeBase: 26.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1688,7 +1671,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 1024
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1712,12 +1695,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1612424261}
-    characterCount: 655
+    characterCount: 1027
     spriteCount: 0
-    spaceCount: 60
-    wordCount: 84
+    spaceCount: 94
+    wordCount: 138
     linkCount: 0
-    lineCount: 12
+    lineCount: 20
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
