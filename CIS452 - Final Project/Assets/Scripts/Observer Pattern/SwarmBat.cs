@@ -22,9 +22,8 @@ public class SwarmBat : MonoBehaviour, IObserver
     public float minRange = 10f;
     private bool moveTowardsPlayerCoroutineRunning;
 
-    public void UpdateData(bool inChaseMode, float movementSpeed, float jumpHeight, Color color, float damageRate, float damageStrength)
+    public void UpdateData(bool inChaseMode, float movementSpeed)
     {
-        defaultColor = color;
         chasingPlayer = inChaseMode;
 
         if (chasingPlayer && !moveTowardsPlayerCoroutineRunning)
@@ -77,7 +76,7 @@ public class SwarmBat : MonoBehaviour, IObserver
 
     private void ChangeColor(Color defaultColor)
     {
-        rend.material.SetColor("_Color", defaultColor);
+        //rend.material.SetColor("_Color", defaultColor);
     }
 
     private void CheckPlayerDistance()

@@ -20,19 +20,17 @@ public class SwarmRat : MonoBehaviour, IObserver
 
     public float minRange = 10f;
 
-    public void UpdateData(bool inChaseMode, float movementSpeed, float jumpHeight, Color color, float damageRate, float damageStrength)
+    public void UpdateData(bool inChaseMode, float movementSpeed)
     {
-        defaultColor = color;
-
         chasingPlayer = inChaseMode;
 
         if (chasingPlayer)
         {
-            StartCoroutine(JumpTowardsPlayer(movementSpeed, jumpHeight));
+            StartCoroutine(JumpTowardsPlayer(movementSpeed));
         }
         else if (!chasingPlayer)
         {
-            StartCoroutine(IdleMovement(jumpHeight));
+            StartCoroutine(IdleMovement(movementSpeed));
         }
     }
 
@@ -49,7 +47,6 @@ public class SwarmRat : MonoBehaviour, IObserver
     // Update is called once per frame
     void Update()
     {
-        ChangeColor(defaultColor);
         CheckPlayerDistance();
     }
 
@@ -75,7 +72,7 @@ public class SwarmRat : MonoBehaviour, IObserver
 
     private void ChangeColor(Color defaultColor)
     {
-        rend.material.SetColor("_Color", defaultColor);
+        //rend.material.SetColor("_Color", defaultColor);
     }
 
     private void CheckPlayerDistance()
@@ -94,7 +91,7 @@ public class SwarmRat : MonoBehaviour, IObserver
         }
     }
 
-    private IEnumerator JumpTowardsPlayer(float movementSpeed, float jumpHeight)
+    private IEnumerator JumpTowardsPlayer(float movementSpeed)
     {
         if (gameObject != null && gameObject.activeSelf && player != null)
         {
@@ -107,17 +104,17 @@ public class SwarmRat : MonoBehaviour, IObserver
 
         if (chasingPlayer)
         {
-            StartCoroutine(JumpTowardsPlayer(movementSpeed, jumpHeight));
+            StartCoroutine(JumpTowardsPlayer(movementSpeed));
         }
     }
 
-    private IEnumerator IdleMovement(float jumpHeight)
+    private IEnumerator IdleMovement(float moveSpeed)
     {
         //Debug.Log("Rat idling, and jumping occasionally at a height of " + jumpHeight + " because its a Rat! ");
 
         if (gameObject.activeSelf && gameObject != null && player != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, jumpHeight);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
         }
 
         if (gameObject.activeSelf && gameObject != null && player != null)
@@ -126,7 +123,7 @@ public class SwarmRat : MonoBehaviour, IObserver
 
             if (willJump < 50)
             {
-                transform.Translate(0, jumpHeight, 0);
+                transform.Translate(0, moveSpeed, 0);
             }
         }
 
@@ -134,7 +131,7 @@ public class SwarmRat : MonoBehaviour, IObserver
 
         if (!chasingPlayer)
         {
-            StartCoroutine(IdleMovement(jumpHeight));
+            StartCoroutine(IdleMovement(moveSpeed));
         }
     }
 
