@@ -18,18 +18,10 @@ public class SwarmBehaviorData : MonoBehaviour, ISubject
     public float moveSpeed = 1f;
     public float jumpHeight = 1f;
 
-    private Color color;
-    public Color normalColor;
-    public Color lowHealthColor;
-
-    public float rateOfDamage = 1f;
-    public float damageStrength = 1f;
-
     // Start is called before the first frame update
     void Start()
     {
         chasingPlayer = false;
-        color = normalColor;
         NotifyObservers();
     }
 
