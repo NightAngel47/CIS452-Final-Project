@@ -36,19 +36,7 @@ public class SwarmBehaviorData : MonoBehaviour, ISubject
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Alpha1))
-        //{
-        //    if(!chasingPlayer)
-        //    {
-        //        chasingPlayer = true;
-        //        NotifyObservers();
-        //    }
-        //    else if(chasingPlayer)
-        //    {
-        //        chasingPlayer = false;
-        //        NotifyObservers();
-        //    }
-        //}
+       
     }
 
     public void NotifyObservers()
