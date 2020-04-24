@@ -22783,6 +22783,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_text
+      value: 'Ah  you  made  it past the  first level, congratulations. I  was  not
+        sure  if I would  see  you  again,  like  most adventurers. You  are  stronger 
+        than most, you  might  possibly  make  it past  level two. I  like  your 
+        spunk, here  take  this  tome  to  help  you along  your  journey.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 291
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 4670869947217329401, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
       propertyPath: m_LocalPosition.x
