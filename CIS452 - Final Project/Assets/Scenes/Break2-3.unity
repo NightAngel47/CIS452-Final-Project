@@ -121,6 +121,93 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &94987031
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 164.08186
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 112.028534
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -145.96445
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048415, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio Sources
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6e3c4895ecca2e4691c10c45f91f3c8, type: 3}
+--- !u!82 &94987032 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5967016955027292719, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 94987031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &94987033 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5967016954596081287, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 94987031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &94987034 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2126361683, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 94987031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &216095618 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5658145111820162127, guid: bc128dd01609db34eaf333ab9d850676,
@@ -6655,9 +6742,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 216095618}
     - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
-      propertyPath: maxInvinceTime
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 94987034}
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 165b3415a4cc030439115a4f6a15868b, type: 3}
+    - target: {fileID: 2099228908, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 94987032}
+    - target: {fileID: 2099228908, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: shootingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e505e99fbaf8308438bdff39022e875b, type: 3}
+    - target: {fileID: 1277278311851126796, guid: fd1970adcdc07a742be43e00003a45c9,
+        type: 3}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 94987032}
+    - target: {fileID: 1277278311851126796, guid: fd1970adcdc07a742be43e00003a45c9,
+        type: 3}
+      propertyPath: pickUpTomeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0591dd50f60883449b5c5093b5701ef, type: 3}
+    - target: {fileID: 1277278311851126796, guid: fd1970adcdc07a742be43e00003a45c9,
+        type: 3}
+      propertyPath: dropTomeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 445692099f5692142b4d47560a6cc9ae, type: 3}
     - target: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
         type: 3}
       propertyPath: m_Name
@@ -6972,6 +7086,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: GameSource
+      value: 
+      objectReference: {fileID: 94987033}
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: SoundEffectSource
+      value: 
+      objectReference: {fileID: 94987032}
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: gameMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7bde8d186afcc714c834df863e074d98, type: 3}
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: buttonClick
+      value: 
+      objectReference: {fileID: 8300000, guid: b41c63bae31284e4da31b5bd63b0c3b2, type: 3}
     - target: {fileID: 5658145112119596033, guid: bc128dd01609db34eaf333ab9d850676,
         type: 3}
       propertyPath: m_Material

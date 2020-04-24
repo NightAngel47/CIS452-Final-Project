@@ -11,6 +11,25 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource GameSource;
+    public AudioClip gameMusic;
+
+    public AudioSource SoundEffectSource;
+    public AudioClip buttonClick;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        GameSource.clip = gameMusic;
+        GameSource.Play();
+    }
+
+    public void ButtonClick()
+    {
+        SoundEffectSource.clip = buttonClick;
+        SoundEffectSource.Play();
+    }
+
     public void CloseGame()
     {
         Application.Quit();

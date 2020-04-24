@@ -11690,6 +11690,93 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e36248b29af02c428be1826c6b5f2c4, type: 3}
+--- !u!1001 &1024360289
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 164.08186
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 112.028534
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -145.96445
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048412, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967016955532048415, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio Sources
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6e3c4895ecca2e4691c10c45f91f3c8, type: 3}
+--- !u!82 &1024360290 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5967016955027292719, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1024360289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1024360291 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5967016954596081287, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1024360289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1024360292 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2126361683, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1024360289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1094687193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11727,6 +11814,26 @@ PrefabInstance:
       propertyPath: m_textInfo.materialCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: GameSource
+      value: 
+      objectReference: {fileID: 1024360291}
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: SoundEffectSource
+      value: 
+      objectReference: {fileID: 1024360290}
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: gameMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fa602a1bd0a5c04e97f9ce5e0c1547b, type: 3}
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: buttonClick
+      value: 
+      objectReference: {fileID: 8300000, guid: b41c63bae31284e4da31b5bd63b0c3b2, type: 3}
     - target: {fileID: 5658145112134090157, guid: bc128dd01609db34eaf333ab9d850676,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -12542,6 +12649,37 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1094687194}
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 1024360292}
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 165b3415a4cc030439115a4f6a15868b, type: 3}
+    - target: {fileID: 2099228908, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 1024360290}
+    - target: {fileID: 2099228908, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: shootingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e505e99fbaf8308438bdff39022e875b, type: 3}
+    - target: {fileID: 1277278311851126796, guid: fd1970adcdc07a742be43e00003a45c9,
+        type: 3}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 1024360290}
+    - target: {fileID: 1277278311851126796, guid: fd1970adcdc07a742be43e00003a45c9,
+        type: 3}
+      propertyPath: pickUpTomeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0591dd50f60883449b5c5093b5701ef, type: 3}
+    - target: {fileID: 1277278311851126796, guid: fd1970adcdc07a742be43e00003a45c9,
+        type: 3}
+      propertyPath: dropTomeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 445692099f5692142b4d47560a6cc9ae, type: 3}
     - target: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
         type: 3}
       propertyPath: m_Name

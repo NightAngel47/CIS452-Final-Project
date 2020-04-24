@@ -1,8 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
 /*
 * Levi Schoof
 * PlayerHealth.cs
@@ -10,6 +6,11 @@ using UnityEngine.UI;
 * Handels the player's health and taking damage.
 * Also handles/uses the health states
 */
+
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class PlayerHealth : MonoBehaviour
     private bool damageTaken = false;
 
     GameManager gm;
+
+    public AudioSource soundEffectSource;
+    public AudioClip damageClip;
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +89,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if(!damageTaken && damage > 0)
         {
+            soundEffectSource.clip = damageClip;
+            soundEffectSource.Play();
+
             currentHealth -= damage;
 
             if (currentHealth > maxHealth)
