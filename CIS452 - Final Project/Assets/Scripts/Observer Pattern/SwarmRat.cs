@@ -96,7 +96,13 @@ public class SwarmRat : MonoBehaviour, IObserver
 
     private IEnumerator JumpTowardsPlayer(float movementSpeed, float jumpHeight)
     {
-        //Debug.Log("Rat jumping at player at the speed of : " + movementSpeed + " with a height of " + jumpHeight + "! ");
+        if (gameObject != null && gameObject.activeSelf && player != null)
+        {
+            Vector2 newPos = player.transform.position;
+            newPos.y = this.transform.position.y;
+            transform.position = Vector3.MoveTowards(transform.position, newPos, movementSpeed * 0.002f);
+        }
+
         yield return new WaitForSeconds(1f);
 
         if (chasingPlayer)
