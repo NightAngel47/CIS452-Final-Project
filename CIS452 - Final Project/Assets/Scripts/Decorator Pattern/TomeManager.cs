@@ -27,14 +27,6 @@ public class TomeManager : MonoBehaviour
         SetUI();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
-    }
-
     public void Combine()
     {
         thisTome = null;

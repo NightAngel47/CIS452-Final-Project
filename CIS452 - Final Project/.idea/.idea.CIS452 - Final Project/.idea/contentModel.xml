@@ -57,7 +57,6 @@
             <e p="EnemyWizard.cs" t="Include" />
             <e p="Projectile.cs" t="Include" />
           </e>
-          <e p="TestSwitchScene.cs" t="Include" />
           <e p="Tome.cs" t="Include" />
           <e p="TomePickup.cs" t="Include" />
         </e>
