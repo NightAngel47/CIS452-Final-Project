@@ -220,6 +220,17 @@ MonoBehaviour:
           m_StringArgument: BreakBegin
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 318473530}
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &207093851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +302,7 @@ MonoBehaviour:
   GameSource: {fileID: 3015246}
   gameMusic: {fileID: 8300000, guid: 13679ded36f2fa643a398ffa9bdd597a, type: 3}
   SoundEffectSource: {fileID: 1454758908}
-  buttonClick: {fileID: 0}
+  buttonClick: {fileID: 8300000, guid: b41c63bae31284e4da31b5bd63b0c3b2, type: 3}
 --- !u!114 &318473531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +538,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 318473530}
         m_MethodName: CloseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 318473530}
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

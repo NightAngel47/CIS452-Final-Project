@@ -7077,6 +7077,11 @@ PrefabInstance:
       propertyPath: gameMusic
       value: 
       objectReference: {fileID: 8300000, guid: aeb215624f5ddfc4f8adf32db6960bb7, type: 3}
+    - target: {fileID: 5658145111880896464, guid: bc128dd01609db34eaf333ab9d850676,
+        type: 3}
+      propertyPath: buttonClick
+      value: 
+      objectReference: {fileID: 8300000, guid: b41c63bae31284e4da31b5bd63b0c3b2, type: 3}
     - target: {fileID: 5658145112119596033, guid: bc128dd01609db34eaf333ab9d850676,
         type: 3}
       propertyPath: m_Material
