@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04645851069011247b4875f6d20a3a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRange: 20
+  minRange: 3
 --- !u!61 &1390709561983467429
 BoxCollider2D:
   m_ObjectHideFlags: 0

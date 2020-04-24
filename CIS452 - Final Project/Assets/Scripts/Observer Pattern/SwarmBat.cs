@@ -20,13 +20,14 @@ public class SwarmBat : MonoBehaviour, IObserver
     private GameObject player;
 
     public float minRange = 10f;
+    private bool moveTowardsPlayerCoroutineRunning;
 
     public void UpdateData(bool inChaseMode, float movementSpeed, float jumpHeight, Color color, float damageRate, float damageStrength)
     {
         defaultColor = color;
         chasingPlayer = inChaseMode;
 
-        if (chasingPlayer)
+        if (chasingPlayer && !moveTowardsPlayerCoroutineRunning)
         {
             StartCoroutine(MoveTowardsPlayer(movementSpeed));
         }
@@ -39,6 +40,7 @@ public class SwarmBat : MonoBehaviour, IObserver
     // Start is called before the first frame update
     void Start()
     {
+        moveTowardsPlayerCoroutineRunning = false;
         swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
         rend = GetComponent<SpriteRenderer>();
         //swarmBatBehavior.RegisterObserver(this);
@@ -57,7 +59,7 @@ public class SwarmBat : MonoBehaviour, IObserver
     {
         swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
 
-        if(this.gameObject != null)
+        if (this.gameObject != null)
         {
             swarmBatBehavior.RegisterObserver(this);
         }
@@ -67,7 +69,7 @@ public class SwarmBat : MonoBehaviour, IObserver
     {
         swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
 
-        if(this.gameObject != null && swarmBatBehavior != null)
+        if (this.gameObject != null && swarmBatBehavior != null)
         {
             swarmBatBehavior.RemoveObserver(this);
         }
@@ -87,7 +89,7 @@ public class SwarmBat : MonoBehaviour, IObserver
             swarmBatBehavior.chasingPlayer = true;
             swarmBatBehavior.NotifyObservers();
         }
-        else if (playerPos.x > minRange && playerPos.x < -minRange && playerPos.y > minRange && playerPos.y < -minRange)
+        else if ((playerPos.x > minRange || playerPos.x < -minRange) && (playerPos.y > minRange && playerPos.y < -minRange))
         {
             swarmBatBehavior.chasingPlayer = false;
             swarmBatBehavior.NotifyObservers();
@@ -96,28 +98,29 @@ public class SwarmBat : MonoBehaviour, IObserver
 
     private IEnumerator MoveTowardsPlayer(float movementSpeed)
     {
+        moveTowardsPlayerCoroutineRunning = true;
+
         //Debug.Log("Bat moving towards player at the speed of : " + movementSpeed + "! ");
 
         //transform.Translate(2 * Time.deltaTime * movementSpeed, 2 * Time.deltaTime * movementSpeed, 0);
-        
-        if(gameObject != null && gameObject.activeSelf && player != null)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movementSpeed * 0.002f);
-        }
-
-        yield return new WaitForSeconds(1f);
 
         if (chasingPlayer)
         {
-            StartCoroutine(MoveTowardsPlayer(movementSpeed));
+            if (gameObject != null && gameObject.activeSelf && player != null)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movementSpeed * 0.002f);
+            }
         }
 
         yield return new WaitForEndOfFrame();
+        StartCoroutine(MoveTowardsPlayer(movementSpeed));
     }
 
     private IEnumerator IdleMovement()
     {
         //Debug.Log("Bat idling! ");
+        moveTowardsPlayerCoroutineRunning = false;
+
         yield return new WaitForSeconds(1f);
 
         if (!chasingPlayer)
