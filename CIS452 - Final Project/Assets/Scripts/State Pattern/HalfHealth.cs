@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Levi Schoof
+* HalfHealth.cs
+* Final Project
+* Implaments the HealthStates abstract classs
+* The health stats that is used when the player is at Half Health
+*/
+
 public class HalfHealth : HealthStates
 {
     public override void ChangeMovementParticle()

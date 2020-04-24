@@ -3,8 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Levi Schoof
+* HealthStates.cs
+* Final Project
+* The abstract class for the players different health states.
+* Changes screen flash and particle effects
+*/
 public abstract class HealthStates : MonoBehaviour
 {
+
    [HideInInspector] public ParticleSystem movementParticles;
    [HideInInspector] public GameObject flashImage;
    [HideInInspector] public Color tempColor;

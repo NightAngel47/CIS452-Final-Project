@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Levi Schoof
+* PlayerHealth.cs
+* Final Project
+* Handels the player's health and taking damage.
+* Also handles/uses the health states
+*/
+
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth;

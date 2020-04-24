@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Levi Schoof
+* EnemyHealth.cs
+* Final Project
+* Handels the enemy's health and taking damage.
+*/
+
 public class EnemyHealth : MonoBehaviour
 {
     public Slider healthBar;

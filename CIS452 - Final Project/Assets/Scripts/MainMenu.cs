@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+/*
+* Levi Schoof
+* MainMenu.cs
+* Final Project
+* Handels the UI functions in the Main Menu
+*/
 
 public class MainMenu : MonoBehaviour
 {

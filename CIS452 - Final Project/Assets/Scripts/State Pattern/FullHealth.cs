@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Levi Schoof
+* FullHealth.cs
+* Final Project
+* Implaments the HealthStates abstract classs
+* The health stats that is used when the player is at Full Health
+*/
 public class FullHealth : HealthStates
 {
     public override void ChangeMovementParticle()
