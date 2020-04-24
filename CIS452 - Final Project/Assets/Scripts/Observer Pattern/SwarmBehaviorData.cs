@@ -33,12 +33,6 @@ public class SwarmBehaviorData : MonoBehaviour, ISubject
         NotifyObservers();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
     public void NotifyObservers()
     {
         foreach (IObserver observer in observerList)
