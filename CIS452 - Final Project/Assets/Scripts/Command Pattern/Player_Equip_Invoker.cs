@@ -6,6 +6,7 @@
 * picking them up, combining tomes, and dropping tomes.
 */
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,11 @@ public class Player_Equip_Invoker : MonoBehaviour
         tomeManager = FindObjectOfType<TomeManager>();
         nearTome = null;
         equipCommand = gameObject.AddComponent<EquipCommand>();
+    }
+
+    private void Start()
+    {
+        tomeStack.Clear();
     }
 
     private void Update()
