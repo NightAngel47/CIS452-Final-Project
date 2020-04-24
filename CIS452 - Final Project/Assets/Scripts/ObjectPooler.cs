@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Simple_Factory;
 
+/*
+* William Nomikos
+* ObjectPooler.cs
+* Final Project
+* Handles object pooling for enemies.
+*/
+
 public class ObjectPooler : MonoBehaviour
 {
     public List<Pool> pools;
