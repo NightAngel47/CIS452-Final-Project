@@ -26,6 +26,9 @@ public class Player_Equip_Invoker : MonoBehaviour
     private GameObject nearTome;
 
     private TomeManager tomeManager;
+
+    public AudioSource soundEffectSource;
+    public AudioClip pickUpTomeClip;
         
     private void Awake()
     {
@@ -50,13 +53,14 @@ public class Player_Equip_Invoker : MonoBehaviour
                     TossTome();
                 }
                 currentTome = nearTome.GetComponent<TomePickup>().tome;
+                soundEffectSource.clip = pickUpTomeClip;
+                soundEffectSource.Play();
 
                 equipCommand.Execute();
 
                 if (tomeManager)
                 {
 
-                    Debug.Log("TomesCombined");
                     tomeManager.Combine();
                 }
 
@@ -69,7 +73,7 @@ public class Player_Equip_Invoker : MonoBehaviour
         //    equipCommand.Execute();
         //}
 
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (currentTome != null)
             {
@@ -87,10 +91,10 @@ public class Player_Equip_Invoker : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            foreach(Tome t in tomeStack)
-            {
-                t.Print();
-            }
+            //foreach(Tome t in tomeStack)
+            //{
+            //    t.Print();
+            //}
         }
     }
 
