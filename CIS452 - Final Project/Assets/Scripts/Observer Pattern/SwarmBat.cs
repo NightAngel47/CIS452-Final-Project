@@ -67,7 +67,7 @@ public class SwarmBat : MonoBehaviour, IObserver
     {
         swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
 
-        if(this.gameObject != null)
+        if(this.gameObject != null && swarmBatBehavior != null)
         {
             swarmBatBehavior.RemoveObserver(this);
         }
@@ -126,19 +126,25 @@ public class SwarmBat : MonoBehaviour, IObserver
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void DestroyObserver()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Player it by Swarm Bat!");
-
-            swarmBatBehavior.RemoveObserver(this);
-            ObjectPooler.instance.ReturnObjectToPool("Bat", gameObject);
-
-            //swarmBatBehavior.RemoveObserver(this);
-            //Destroy(this.gameObject);
-
-            Debug.Log("The swarm bat also died!");
-        }
+        swarmBatBehavior.RemoveObserver(this);
+        ObjectPooler.instance.ReturnObjectToPool("Bat", gameObject);
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        Debug.Log("Player it by Swarm Bat!");
+
+    //        swarmBatBehavior.RemoveObserver(this);
+    //        ObjectPooler.instance.ReturnObjectToPool("Bat", gameObject);
+
+    //        //swarmBatBehavior.RemoveObserver(this);
+    //        //Destroy(this.gameObject);
+
+    //        Debug.Log("The swarm bat also died!");
+    //    }
+    //}
 }

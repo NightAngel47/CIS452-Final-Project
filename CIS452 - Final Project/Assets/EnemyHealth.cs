@@ -63,7 +63,18 @@ public class EnemyHealth : MonoBehaviour
 
     private void Death()
     {
-        Destroy(this.gameObject);
+        if(this.gameObject.tag == "Bat")
+        {
+            this.gameObject.GetComponent<SwarmBat>().DestroyObserver();
+        }
+        else if(this.gameObject.tag == "Rat")
+        {
+            this.gameObject.GetComponent<SwarmRat>().DestroyObserver();
+        }
+        else
+        {
+            ObjectPooler.instance.ReturnObjectToPool(this.gameObject.tag, this.gameObject);
+        }
     }
 
 
@@ -72,7 +83,6 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             TakeDamage(FindObjectOfType<TomeManager>().GetDamage());
-            //Destroy(collision.gameObject);
             FindKnockDirection(collision.gameObject);
         }
     }
@@ -82,7 +92,6 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             TakeDamage(FindObjectOfType<TomeManager>().GetDamage());
-            //Destroy(collision.gameObject);
             FindKnockDirection(collision.gameObject);
         }
     }

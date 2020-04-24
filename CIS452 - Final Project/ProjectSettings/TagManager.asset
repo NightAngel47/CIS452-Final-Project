@@ -8,6 +8,11 @@ TagManager:
   - Projectile
   - Enemy
   - EnemyProjectile
+  - Bat
+  - Rat
+  - Archer
+  - Warrior
+  - Wizard
   layers:
   - Default
   - TransparentFX

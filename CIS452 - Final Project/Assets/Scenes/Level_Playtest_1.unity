@@ -20476,6 +20476,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ancient One (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5832287042273450207, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832287042273450207, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7213803120397475298, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -21219,6 +21229,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 216095618}
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: maxInvinceTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
         type: 3}
       propertyPath: m_Name

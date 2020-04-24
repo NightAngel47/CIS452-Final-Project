@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 6298022320093223749}
   m_Layer: 10
   m_Name: Wizard Enemy
-  m_TagString: Untagged
+  m_TagString: Wizard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
