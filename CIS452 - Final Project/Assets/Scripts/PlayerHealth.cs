@@ -28,7 +28,10 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         damageTaken = false;
+        
+        //Convert invincibility time from frames to seconds by dividing it by the time step
         maxInvinceTime /= 0.02f;
+
         currentCount = maxInvinceTime;
 
         healthBar.maxValue = maxHealth;
@@ -36,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
 
      
-
+        //Player states
         deadHealthState = this.GetComponent<Dead>();
         fullHealthState = this.GetComponent<FullHealth>();
         halfHealthState = this.GetComponent<HalfHealth>();
@@ -65,6 +68,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Invincibility timer that runs once damage is taken
         if(damageTaken)
         {
             if(currentCount > 0)
@@ -79,6 +83,12 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes the players health by the value passed in. If positive value, player takes damage.
+    /// If negative value, player heals. Damage will only be taken if the player has no invincibility
+    /// frames left.
+    /// </summary>
+    /// <param name="damage"></param>
     private void TakeDamage(int damage)
     {
         if(!damageTaken && damage > 0)
@@ -105,15 +115,12 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealthState.PlayerHealed();
         }
-        //else
-        //{
-        //    damageTaken = true;
-        //    canTakeDamage = false;
-        //    //StopCoroutine(InvinceTime());
-        //    //StartCoroutine(InvinceTime());
-        //}
     }
 
+    /// <summary>
+    /// Changes the player's state based on how much health they have.
+    /// </summary>
+    /// <param name="dam"></param>
     private void ChangeState(int dam)
     {
         if (currentHealth > maxHealth / 2) { currentHealthState = fullHealthState; }
@@ -132,6 +139,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     #region DamageColliders
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -144,14 +152,6 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(1);
         }
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Bat") || collision.gameObject.CompareTag("Rat") || collision.gameObject.CompareTag("Warrior"))
-    //    {
-    //        TakeDamage(1);
-    //    }
-    //}
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -170,11 +170,4 @@ public class PlayerHealth : MonoBehaviour
     }
 
     #endregion
-
-    //IEnumerator InvinceTime()
-    //{
-    //    isInvince = true;
-    //    yield return new WaitForSeconds(maxInvinceTime);
-    //    isInvince = false;
-    //}
 }
