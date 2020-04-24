@@ -36,9 +36,6 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         damageTaken = false;
-        
-        //Convert invincibility time from frames to seconds by dividing it by the time step
-        maxInvinceTime /= 0.02f;
 
         currentCount = maxInvinceTime;
 
@@ -63,27 +60,14 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.P))
-        //{
-        //    TakeDamage(1);
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.M))
-        //{
-        //    TakeDamage(-1);
-        //}
-    }
-
-    private void FixedUpdate()
-    {
-        //Invincibility timer that runs once damage is taken
-        if(damageTaken)
+        if (damageTaken)
         {
-            if(currentCount > 0)
+            if (currentCount > 0)
             {
-                currentCount--;
+                Debug.Log("Current Count " + currentCount);
+                currentCount -= 1 * Time.deltaTime;
             }
-            else if(currentCount <= 0)
+            else if (currentCount <= 0)
             {
                 damageTaken = false;
                 currentCount = maxInvinceTime;
