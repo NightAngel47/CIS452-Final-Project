@@ -5019,6 +5019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   healthBar: {fileID: 0}
+  maxInvinceTime: 0.5
 --- !u!114 &2099228899
 MonoBehaviour:
   m_ObjectHideFlags: 0
