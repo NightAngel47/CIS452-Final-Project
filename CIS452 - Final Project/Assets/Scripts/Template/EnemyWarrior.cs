@@ -1,6 +1,6 @@
 ﻿/*
  * Sydney Foe
- * Assignment 10
+ * Final Project
  * EnemyWarrior
  * Sets up the warriors behaviours. How it moves and attacks. 
  */

@@ -1,6 +1,6 @@
 ﻿/*
  * Sydney Foe
- * Assignment 10
+ * Final Project
  * EnemyTemplate
  * Sets up the enemy template. Handles player agro, death. Creates attack and movement methods for each enemy to create themselves
  */

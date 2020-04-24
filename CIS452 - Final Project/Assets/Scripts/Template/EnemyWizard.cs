@@ -1,6 +1,6 @@
 ﻿/*
  * Sydney Foe
- * Assignment 10
+ * Final Project
  * EnemyWizard
  * Sets up the wizards behaviours. How it moves and attacks. 
  */
