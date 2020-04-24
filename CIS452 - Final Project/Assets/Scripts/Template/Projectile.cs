@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * Sydney Foe
+ * Assignment 10
+ * Projectile
+ * Sets up the enemy projectile behaviour so that it goes towards the player
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
