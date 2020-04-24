@@ -6503,7 +6503,7 @@ PrefabInstance:
     - target: {fileID: 1078821858067529702, guid: e3e5f33786aae0c459eca0258fc4bef4,
         type: 3}
       propertyPath: nextLevel
-      value: Level_Playtest_2
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 1801217073568675308, guid: e3e5f33786aae0c459eca0258fc4bef4,
         type: 3}
