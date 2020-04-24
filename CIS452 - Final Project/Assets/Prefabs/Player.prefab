@@ -4907,7 +4907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 150
-  jumpHeight: 5.5
+  jumpHeight: 7
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -5019,7 +5019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   healthBar: {fileID: 0}
-  maxInvinceTime: 0.5
+  maxInvinceTime: 2
 --- !u!114 &2099228899
 MonoBehaviour:
   m_ObjectHideFlags: 0
