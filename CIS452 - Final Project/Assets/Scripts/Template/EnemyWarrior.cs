@@ -21,9 +21,8 @@ public class EnemyWarrior : EnemyTemplate
 
     public override void Attack()
     {
-        if (seePlayer == true) //&& (distanceToPlayer > attackRangeMin && distanceToPlayer < attackRangeMax)
+        if (seePlayer == true) 
         {
-            Debug.Log("Warrior Attacks");
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             StartCoroutine("WaitTime");
         }
@@ -38,7 +37,6 @@ public class EnemyWarrior : EnemyTemplate
 
     public override IEnumerator Movement()
     {
-        Debug.Log("Warrior Moved Agressively");
 
         if (isMoving == false)
         {

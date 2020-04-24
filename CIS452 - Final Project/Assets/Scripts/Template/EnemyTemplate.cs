@@ -47,34 +47,8 @@ public abstract class EnemyTemplate : MonoBehaviour
 
     public void Death()
     { 
-        //called when player attacks enemy\
-        //since no attack is fully in enemy will not die
         Destroy(gameObject);
     }
-
-    //public IEnumerator EnemyActions()
-    //{
-    //    AgroPlayer();
-
-    //    if (seePlayer == false)
-    //    {
-    //        if (enemyType == 1)
-    //        {
-    //            gameObject.transform.position = Vector3.zero;
-    //        }
-
-    //        float randTime = Random.Range(4, 10);
-    //        yield return new WaitForSeconds(randTime);
-
-    //        Movement();
-    //    }
-
-    //    if (seePlayer == true)
-    //    {
-    //        yield return new WaitForSeconds(attackCoolDown);
-    //        Attack();
-    //    }
-    //}
 
     public void EnemyActions()
     {

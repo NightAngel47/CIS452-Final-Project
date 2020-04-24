@@ -21,9 +21,8 @@ public class EnemyArcher : EnemyTemplate
 
     public override void Attack()
     {
-        if (seePlayer == true) //&& distanceToPlayer > attackRangeMin
+        if (seePlayer == true) 
         {
-            // Debug.Log("Archer Shoots Arrow");
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             StartCoroutine("WaitTimeAttack");
         }
@@ -43,12 +42,8 @@ public class EnemyArcher : EnemyTemplate
 
         if (rand <= 4)
         {
-            Debug.Log("Archer Patrols");
 
             float distance = Random.Range(moveMin, moveMax);
-
-            //startPos = war.transform.position;
-            //endPos = new Vector3(war.transform.position.x + distance, war.transform.position.y, war.transform.position.z);
 
             moveRight = !moveRight;
             isMoving = true;

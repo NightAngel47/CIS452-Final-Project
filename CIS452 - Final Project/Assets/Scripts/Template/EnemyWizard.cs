@@ -17,15 +17,13 @@ public class EnemyWizard : EnemyTemplate
 
     public void Update()
     {
-        //StartCoroutine("EnemyActions");
         EnemyActions();
     }
 
     public override void Attack()
     {
-        if(shootOnce == false) //seePlayer == true&& distanceToPlayer > attackRangeMin
+        if(shootOnce == false)
         {
-            Debug.Log("Wizard Cast Spell");
             shootOnce = true;
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             StartCoroutine("WaitTime");
@@ -47,13 +45,11 @@ public class EnemyWizard : EnemyTemplate
 
         if (rand <= 4)
         {
-            Debug.Log("Wizard Teleported");
             float distance = Random.Range(moveMin, moveMax);
             int side = Random.Range(0, 2);
             if (side == 0) //move right
             {
                 wiz.transform.position = new Vector3(distance, wiz.transform.position.y, 0);
-                //gameObject.transform.position = Vector3.zero;
             }
 
             if (side == 1) //move left
