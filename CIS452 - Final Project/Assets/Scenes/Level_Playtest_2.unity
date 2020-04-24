@@ -23509,6 +23509,12 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 809668045}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &809668048 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2126361683, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 809668045}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &826393141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24541,6 +24547,14 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1258802262}
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 809668048}
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 165b3415a4cc030439115a4f6a15868b, type: 3}
     - target: {fileID: 2099228908, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
       propertyPath: soundEffectSource
       value: 

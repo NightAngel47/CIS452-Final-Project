@@ -6670,6 +6670,14 @@ PrefabInstance:
       propertyPath: maxInvinceTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: soundEffectSource
+      value: 
+      objectReference: {fileID: 5967016955632222743}
+    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 165b3415a4cc030439115a4f6a15868b, type: 3}
     - target: {fileID: 2099228908, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
       propertyPath: soundEffectSource
       value: 
@@ -7233,3 +7241,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6e3c4895ecca2e4691c10c45f91f3c8, type: 3}
+--- !u!82 &5967016955632222743 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2126361683, guid: c6e3c4895ecca2e4691c10c45f91f3c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5967016955632222742}
+  m_PrefabAsset: {fileID: 0}

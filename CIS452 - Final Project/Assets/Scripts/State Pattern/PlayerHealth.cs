@@ -33,6 +33,9 @@ public class PlayerHealth : MonoBehaviour
 
     GameManager gm;
 
+    public AudioSource soundEffectSource;
+    public AudioClip damageClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +89,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if(!damageTaken && damage > 0)
         {
+            soundEffectSource.clip = damageClip;
+            soundEffectSource.Play();
+
             currentHealth -= damage;
 
             if (currentHealth > maxHealth)
