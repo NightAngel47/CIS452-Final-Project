@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Playtest_3.unity
     guid: cf2ce567f370fb149969905d9734286e
+  - enabled: 1
+    path: Assets/Scenes/BreakBegin.unity
+    guid: 9eff569e7e922c840b8399850c7abbfa
+  - enabled: 1
+    path: Assets/Scenes/Break1-2.unity
+    guid: 7e748f3dea7192c42b2c1db0c3ea2f8a
+  - enabled: 1
+    path: Assets/Scenes/Break2-3.unity
+    guid: 27bd729f6216a804f9a0c6d669ad3822
+  - enabled: 1
+    path: Assets/Scenes/BreakEnd.unity
+    guid: de67b134f414a344c888bde17a8e32b6
   m_configObjects: {}
