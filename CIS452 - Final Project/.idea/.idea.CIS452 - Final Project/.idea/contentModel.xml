@@ -28,6 +28,8 @@
             <e p="TomeManager.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
+          <e p="Gate.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
           <e p="Observer Pattern" t="Include">
             <e p="IObserver.cs" t="Include" />
             <e p="ISubject.cs" t="Include" />
@@ -36,16 +38,15 @@
             <e p="SwarmRat.cs" t="Include" />
           </e>
           <e p="Player_Movement.cs" t="Include" />
-          <e p="PlayerHealth.cs" t="Include" />
           <e p="Simple Factory" t="Include">
             <e p="EnemyFactory.cs" t="Include" />
-            <e p="EnemySpawner.cs" t="Include" />
           </e>
           <e p="State Pattern" t="Include">
             <e p="Dead.cs" t="Include" />
             <e p="FullHealth.cs" t="Include" />
             <e p="HalfHealth.cs" t="Include" />
             <e p="HealthStates.cs" t="Include" />
+            <e p="PlayerHealth.cs" t="Include" />
             <e p="QuarterHealth.cs" t="Include" />
           </e>
           <e p="Temp.cs" t="Include" />

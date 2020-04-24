@@ -13,14 +13,6 @@ namespace Simple_Factory
     public class EnemyFactory : MonoBehaviour
     {
         [SerializeField] private List<GameObject> enemies = new List<GameObject>();
-        public enum EnemyTypes
-        {
-            Bat,
-            Rat,
-            Archer,
-            Warrior,
-            Wizard
-        }
 
         public GameObject EnemyToSpawn(string enemyType)
         {
@@ -29,19 +21,19 @@ namespace Simple_Factory
             switch (enemyType)
             {
                 case "Bat":
-                    enemyToSpawn = enemies[(int)EnemyTypes.Bat];
+                    enemyToSpawn = enemies[0];
                     break;
                 case "Rat":
-                    enemyToSpawn = enemies[(int)EnemyTypes.Rat];
+                    enemyToSpawn = enemies[1];
                     break;
                 case "Archer":
-                    enemyToSpawn = enemies[(int)EnemyTypes.Archer];
+                    enemyToSpawn = enemies[2];
                     break;
                 case "Warrior":
-                    enemyToSpawn = enemies[(int)EnemyTypes.Warrior];
+                    enemyToSpawn = enemies[3];
                     break;
                 case "Wizard":
-                    enemyToSpawn = enemies[(int)EnemyTypes.Wizard];
+                    enemyToSpawn = enemies[4];
                     break;
                 default:
                     Debug.LogError("Enemy type not listed. Passed type: " + enemyType);

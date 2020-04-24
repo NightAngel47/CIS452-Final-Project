@@ -96,7 +96,7 @@ public class SwarmBat : MonoBehaviour, IObserver
 
     private IEnumerator MoveTowardsPlayer(float movementSpeed)
     {
-        Debug.Log("Bat moving towards player at the speed of : " + movementSpeed + "! ");
+        //Debug.Log("Bat moving towards player at the speed of : " + movementSpeed + "! ");
 
         //transform.Translate(2 * Time.deltaTime * movementSpeed, 2 * Time.deltaTime * movementSpeed, 0);
         
@@ -117,7 +117,7 @@ public class SwarmBat : MonoBehaviour, IObserver
 
     private IEnumerator IdleMovement()
     {
-        Debug.Log("Bat idling! ");
+        //Debug.Log("Bat idling! ");
         yield return new WaitForSeconds(1f);
 
         if (!chasingPlayer)
