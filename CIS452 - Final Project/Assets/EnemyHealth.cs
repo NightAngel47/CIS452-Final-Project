@@ -26,9 +26,18 @@ public class EnemyHealth : MonoBehaviour
 
     public bool knockback = true;
 
+    private AudioSource enemyDamageSource;
+    public AudioClip batDamage;
+    public AudioClip ratDamage;
+    public AudioClip archerDamage;
+    public AudioClip warriorDamage;
+    public AudioClip wizardDamage;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        enemyDamageSource = GameObject.Find("EnemyDamage").GetComponent<AudioSource>();
         sr = this.GetComponent<SpriteRenderer>();
 
         SetHealthBar();
@@ -47,6 +56,37 @@ public class EnemyHealth : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
+        if(enemyDamageSource == null)
+        {
+            enemyDamageSource = GameObject.Find("EnemyDamage").GetComponent<AudioSource>();
+        }
+
+        if (gameObject.tag == "Bat")
+        {
+            enemyDamageSource.clip = batDamage;
+            enemyDamageSource.Play();
+        }
+        else if (gameObject.tag == "Rat")
+        {
+            enemyDamageSource.clip = ratDamage;
+            enemyDamageSource.Play();
+        }
+        else if (gameObject.tag == "Archer")
+        {
+            enemyDamageSource.clip = archerDamage;
+            enemyDamageSource.Play();
+        }
+        else if (gameObject.tag == "Warrior")
+        {
+            enemyDamageSource.clip = warriorDamage;
+            enemyDamageSource.Play();
+        }
+        else if (gameObject.tag == "Wizard")
+        {
+            enemyDamageSource.clip = wizardDamage;
+            enemyDamageSource.Play();
+        }
+
         StopCoroutine(DamageFlash());
         currentHealth -= damage;
         healthBar.gameObject.SetActive(true);
