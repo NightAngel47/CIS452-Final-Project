@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-/*
+﻿/*
 * Levi Schoof
 * HealthStates.cs
 * Final Project
 * The abstract class for the players different health states.
 * Changes screen flash and particle effects
 */
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+
 public abstract class HealthStates : MonoBehaviour
 {
 

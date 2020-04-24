@@ -1,5 +1,4 @@
-﻿using System.Collections;
-/*
+﻿/*
 * Levi Schoof
 * PlayerHealth.cs
 * Final Project
@@ -7,6 +6,7 @@
 * Also handles/uses the health states
 */
 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
