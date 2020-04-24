@@ -1,6 +1,6 @@
 ﻿/*
  * Sydney Foe
- * Assignment 10
+ * Final Project
  * Projectile
  * Sets up the enemy projectile behaviour so that it goes towards the player
  */

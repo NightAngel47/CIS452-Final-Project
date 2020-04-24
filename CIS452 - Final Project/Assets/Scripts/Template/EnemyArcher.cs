@@ -1,6 +1,6 @@
 ﻿/*
  * Sydney Foe
- * Assignment 10
+ * Final Project
  * EnemyArcher
  * Sets up the archers behaviours. How it moves and attacks. 
  */

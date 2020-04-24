@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-/*
+﻿/*
 * Levi Schoof
 * Gate.cs
 * Final Project
 * Handels the teleporting between levels via the Gates
 */
-
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 public class Gate : MonoBehaviour
 {
     public string nextLevel;
