@@ -24573,6 +24573,11 @@ PrefabInstance:
       propertyPath: pickUpTomeClip
       value: 
       objectReference: {fileID: 8300000, guid: d0591dd50f60883449b5c5093b5701ef, type: 3}
+    - target: {fileID: 1277278311851126796, guid: fd1970adcdc07a742be43e00003a45c9,
+        type: 3}
+      propertyPath: dropTomeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 445692099f5692142b4d47560a6cc9ae, type: 3}
     - target: {fileID: 4101813084368866379, guid: fd1970adcdc07a742be43e00003a45c9,
         type: 3}
       propertyPath: m_Name

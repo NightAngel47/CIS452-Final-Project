@@ -29,7 +29,8 @@ public class Player_Equip_Invoker : MonoBehaviour
 
     public AudioSource soundEffectSource;
     public AudioClip pickUpTomeClip;
-        
+    public AudioClip dropTomeClip;
+
     private void Awake()
     {
         tomeManager = FindObjectOfType<TomeManager>();
@@ -100,6 +101,9 @@ public class Player_Equip_Invoker : MonoBehaviour
 
     private void TossTome()
     {
+        soundEffectSource.clip = dropTomeClip;
+        soundEffectSource.Play();
+
         GameObject discardTome = Instantiate(tomePickup, transform.position+new Vector3(0f,1f,0), Quaternion.identity);
         discardTome.GetComponent<TomePickup>().tome = currentTome;
         currentTome = null;
