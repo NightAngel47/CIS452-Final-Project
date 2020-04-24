@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2498667261605003625}
   - component: {fileID: 7580269735985927807}
   - component: {fileID: 8725465494856975585}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8745496051123169876}
   - component: {fileID: 3646828712392552584}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 5540197688841783314}
   - component: {fileID: 9039855911839611734}
   - component: {fileID: 2608148983966783330}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 4319853672842840637}
   - component: {fileID: 7219995647693174629}
   - component: {fileID: 9109734186357222162}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rat Enemy
   m_TagString: Rat
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2827422850812843450}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 2531575871367191563}
   - component: {fileID: 854561857461521954}
   - component: {fileID: 8947629543309753571}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
