@@ -9,24 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: af69b30bf89442e4a95351729617f6f8
   - enabled: 1
-    path: Assets/Scenes/Billy_Observer_Test.unity
-    guid: fde87a51b73f47f4a8d1389397b6d611
-  - enabled: 1
-    path: Assets/Scenes/Sydney_Template.unity
-    guid: 0ad17c2e112990f4980a307ac35e1c37
-  - enabled: 1
-    path: Assets/Scenes/Levi_Decorator_Test.unity
-    guid: 470540222fb7297468ed705bc10e5fed
-  - enabled: 1
-    path: Assets/Scenes/Connor_Command_Test.unity
-    guid: ae6bbfd15b0b8a3489309a10764be7e0
-  - enabled: 1
-    path: Assets/Scenes/Steven_Simple_Factory.unity
-    guid: cdd0cbd064fc2bf44be6c9f85247206e
-  - enabled: 1
     path: Assets/Scenes/Level_Playtest_1.unity
     guid: 2e43626861ea1c542829ce96dc82a646
   - enabled: 1
     path: Assets/Scenes/Level_Playtest_2.unity
     guid: 38d674eeacb381d42bec803304133292
+  - enabled: 1
+    path: Assets/Scenes/Level_Playtest_3.unity
+    guid: cf2ce567f370fb149969905d9734286e
   m_configObjects: {}

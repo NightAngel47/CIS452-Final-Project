@@ -5019,7 +5019,7 @@ MonoBehaviour:
   damageText: {fileID: 6278780202411275359}
   FireRateText: {fileID: 4159343238687375056}
   SpeedText: {fileID: 5333151053402676579}
-  tome: {fileID: 0}
+  tome: {fileID: 11400000, guid: 32898c135cb10fc4695094511382d5bd, type: 2}
 --- !u!1 &1721052841168716356
 GameObject:
   m_ObjectHideFlags: 0
