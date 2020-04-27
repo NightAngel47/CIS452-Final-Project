@@ -76,27 +76,24 @@ public class Player_Equip_Invoker : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (currentTome != null)
-            {
-                TossTome();
-            }
-
+           
             equipCommand.Undo();
 
             if (tomeManager)
             {
+                TossTome();
                 tomeManager.Combine();
             }
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            //foreach(Tome t in tomeStack)
-            //{
-            //    t.Print();
-            //}
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha4))
+        //{
+        //    //foreach(Tome t in tomeStack)
+        //    //{
+        //    //    t.Print();
+        //    //}
+        //}
     }
 
     private void TossTome()
