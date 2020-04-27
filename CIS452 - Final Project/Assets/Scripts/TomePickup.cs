@@ -20,8 +20,8 @@ public class TomePickup : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = 
-            (Vector2.up * 3 + 
+        GetComponent<Rigidbody2D>().velocity =
+            (Vector2.up * 3 +
             Vector2.right);
 
         OpenPanel(false);
@@ -32,9 +32,51 @@ public class TomePickup : MonoBehaviour
         statsPanel.SetActive(open);
         if (tome)
         {
-            damageText.text = "Damage: +" + tome.damage;
-            FireRateText.text = "Fire Rate: /" + tome.rateOfFire;
-            SpeedText.text = "Spell Speed: +" + tome.speed;
+            if (tome.damage > 0)
+            {
+                damageText.text = "Damage: <b><color=green>+" + tome.damage + "</b></color>";
+            }
+
+            else if (tome.damage < 0)
+            {
+                damageText.text = "Damage: <b><color=red>-" + tome.damage + "</b></color>";
+            }
+
+            else
+            {
+                damageText.text = "Damage: No Change";
+            }
+
+            if (tome.rateOfFire > 1)
+            {
+                FireRateText.text = "Fire Rate: <b><color=green>/" + tome.rateOfFire + "</b></color>";
+            }
+
+            else if (tome.rateOfFire == 1)
+            {
+                FireRateText.text = "Fire Rate: No Change";
+            }
+
+            else
+            {
+                FireRateText.text = "Fire Rate: <b><color=red>/" + tome.rateOfFire + "</b></color>";
+            }
+
+            if (tome.speed > 0)
+            {
+                SpeedText.text = "Spell Speed: +<b><color=green>" + tome.speed + "</b></color>";
+            }
+
+            else if (tome.speed < 0)
+            {
+                SpeedText.text = "Spell Speed: -<b><color=red>" + tome.speed + "</b></color>";
+            }
+
+            else
+            {
+                SpeedText.text = "Spell Speed: No Change";
+            }
+            
         }
     }
 
