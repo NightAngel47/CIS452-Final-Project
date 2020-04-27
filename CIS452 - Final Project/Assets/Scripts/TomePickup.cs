@@ -32,9 +32,9 @@ public class TomePickup : MonoBehaviour
         statsPanel.SetActive(open);
         if (tome)
         {
-            damageText.text = "Damage: " + tome.damage;
-            FireRateText.text = "Fire Rate: " + tome.rateOfFire;
-            SpeedText.text = "Spell Speed: " + tome.speed;
+            damageText.text = "Damage: +" + tome.damage;
+            FireRateText.text = "Fire Rate: /" + tome.rateOfFire;
+            SpeedText.text = "Spell Speed: +" + tome.speed;
         }
     }
 
