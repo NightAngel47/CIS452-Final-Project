@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public void PlayerDied()
     {
         StartCoroutine(FadeInLoseScrean());
+        Time.timeScale = 0;
     }
 
     private void ResartGame()
@@ -70,9 +71,7 @@ public class GameManager : MonoBehaviour
             {
                 text.color = textColor;
             }
-            yield return new WaitForSeconds(.09f);
+            yield return new WaitForSecondsRealtime(.09f);
         }
-        yield return new WaitForSeconds(0);
-        Time.timeScale = 0;
     }
 }

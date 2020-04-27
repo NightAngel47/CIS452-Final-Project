@@ -4989,6 +4989,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tomePickup: {fileID: 1065352420873899363, guid: 0e36248b29af02c428be1826c6b5f2c4,
     type: 3}
+  soundEffectSource: {fileID: 0}
+  pickUpTomeClip: {fileID: 0}
+  dropTomeClip: {fileID: 0}
 --- !u!58 &2099228907
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5019,7 +5022,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   healthBar: {fileID: 0}
-  maxInvinceTime: 2
+  maxInvinceTime: 0.5
+  soundEffectSource: {fileID: 0}
+  damageClip: {fileID: 0}
 --- !u!114 &2099228899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5095,3 +5100,5 @@ MonoBehaviour:
   spellPrefab: {fileID: 2304110202523787780, guid: 5a77806d2782af147bc9b861681f667e,
     type: 3}
   currentSpell: {fileID: 0}
+  soundEffectSource: {fileID: 0}
+  shootingSound: {fileID: 0}

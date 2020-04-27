@@ -21186,10 +21186,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 216095618}
     - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
-      propertyPath: maxInvinceTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2099228898, guid: fd1970adcdc07a742be43e00003a45c9, type: 3}
       propertyPath: damageClip
       value: 
       objectReference: {fileID: 8300000, guid: 165b3415a4cc030439115a4f6a15868b, type: 3}
