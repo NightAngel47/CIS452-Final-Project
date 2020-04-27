@@ -64,12 +64,12 @@ public class TomePickup : MonoBehaviour
 
             if (tome.speed > 0)
             {
-                SpeedText.text = "Spell Speed: +<b><color=green>" + tome.speed + "</b></color>";
+                SpeedText.text = "Spell Speed: <b><color=green>+" + tome.speed + "</b></color>";
             }
 
             else if (tome.speed < 0)
             {
-                SpeedText.text = "Spell Speed: -<b><color=red>" + tome.speed + "</b></color>";
+                SpeedText.text = "Spell Speed: <b><color=red>-" + tome.speed + "</b></color>";
             }
 
             else
