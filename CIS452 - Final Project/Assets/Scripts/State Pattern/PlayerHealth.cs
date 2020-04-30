@@ -68,7 +68,6 @@ public class PlayerHealth : MonoBehaviour
         {
             if (currentCount > 0)
             {
-                Debug.Log("Current Count " + currentCount);
                 currentCount -= 1 * Time.deltaTime;
             }
             else if (currentCount <= 0)

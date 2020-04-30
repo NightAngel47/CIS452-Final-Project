@@ -49,17 +49,17 @@ public class TomePickup : MonoBehaviour
 
             if (tome.rateOfFire > 1)
             {
-                FireRateText.text = "Fire Rate: <b><color=green>/" + tome.rateOfFire + "</b></color>";
+                FireRateText.text = "Seconds Between Shots: <b><color=green>/" + tome.rateOfFire + "</b></color>";
             }
 
             else if (tome.rateOfFire == 1)
             {
-                FireRateText.text = "Fire Rate: No Change";
+                FireRateText.text = "Seconds Between   Shots: No Change";
             }
 
             else
             {
-                FireRateText.text = "Fire Rate: <b><color=red>/" + tome.rateOfFire + "</b></color>";
+                FireRateText.text = "Seconds Between    Shots: <b><color=red>/" + tome.rateOfFire + "</b></color>";
             }
 
             if (tome.speed > 0)

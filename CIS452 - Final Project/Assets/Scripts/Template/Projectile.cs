@@ -24,8 +24,6 @@ public class Projectile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         moveDirection = (player.transform.position - transform.position).normalized * moveSpeed;
 
-        Debug.Log(player.transform.position.x);
-        Debug.Log(transform.position.x);
         if(player.transform.position.x <= transform.position.x)
         {
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * moveSpeed;

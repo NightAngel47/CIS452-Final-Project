@@ -46,6 +46,11 @@ public class EnemyHealth : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
     }
 
+    private void OnEnable()
+    {
+        SetHealthBar();
+    }
+
     private void SetHealthBar()
     {
         healthBar.maxValue = healthMax;
@@ -87,8 +92,10 @@ public class EnemyHealth : MonoBehaviour
             enemyDamageSource.Play();
         }
 
+       
         StopCoroutine(DamageFlash());
         currentHealth -= damage;
+    
         healthBar.gameObject.SetActive(true);
         healthBar.value = currentHealth;
         StartCoroutine(DamageFlash());
