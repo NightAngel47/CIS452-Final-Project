@@ -6342,6 +6342,16 @@ PrefabInstance:
       value: "I  see  that you  are  going  to  test  your  skills  at  the  Ancient
         Ones Dungeon.  Let\u2019s see  how  long  you  will last, best of  luck\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_characterSpacing
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_lineSpacing
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1821759279956991052, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
       propertyPath: m_SizeDelta.y

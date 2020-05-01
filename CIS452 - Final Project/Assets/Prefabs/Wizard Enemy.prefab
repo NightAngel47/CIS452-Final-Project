@@ -4942,8 +4942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0d5b5af498166428d5630546df6ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 2094414657041361771, guid: b35aead0d2066b544a12f0a6050403d4,
-    type: 3}
+  healthBar: {fileID: 1438632631681510763}
   healthMax: 10
   knockback: 1
   batDamage: {fileID: 8300000, guid: 893ebadca4057e54b8c3735e84f91437, type: 3}

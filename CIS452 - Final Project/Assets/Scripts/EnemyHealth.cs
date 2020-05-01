@@ -42,6 +42,7 @@ public class EnemyHealth : MonoBehaviour
 
         SetHealthBar();
         orgColor = sr.color;
+        orgColor.a = 1;
 
         rb = this.GetComponent<Rigidbody2D>();
     }
@@ -117,6 +118,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Death()
     {
+        sr.color = orgColor;
         if(this.gameObject.tag == "Bat")
         {
             this.gameObject.GetComponent<SwarmBat>().DestroyObserver();

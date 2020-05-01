@@ -20,6 +20,12 @@ public class SwarmBat : MonoBehaviour, IObserver
     public float minRange = 10f;
     private bool moveTowardsPlayerCoroutineRunning;
 
+    private float tempMinRange;
+
+    private float orgMovementSpeed;
+
+    Color orgColor;
+
     public void UpdateData(bool inChaseMode, float movementSpeed)
     {
         chasingPlayer = inChaseMode;
@@ -41,6 +47,25 @@ public class SwarmBat : MonoBehaviour, IObserver
         swarmBatBehavior = FindObjectOfType<SwarmBehaviorData>();
         chasingPlayer = false;
         player = FindObjectOfType<Player_Movement>().gameObject;
+
+        GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<Rigidbody2D>().simulated = false;
+        tempMinRange = minRange;
+        orgColor = this.GetComponent<SpriteRenderer>().color;
+        orgColor.a = .25f;
+        this.GetComponent<SpriteRenderer>().color = orgColor;
+        minRange = 10000000000000000000;
+        Invoke("SpawnFix", 1);
+    }
+
+    private void SpawnFix()
+    {
+        GetComponent<BoxCollider2D>().isTrigger = false;
+        GetComponent<Rigidbody2D>().simulated = true;
+        minRange = tempMinRange;
+
+        orgColor.a = 1;
+        this.GetComponent<SpriteRenderer>().color = orgColor;
     }
 
     // Update is called once per frame

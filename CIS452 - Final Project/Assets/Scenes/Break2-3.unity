@@ -6371,22 +6371,22 @@ PrefabInstance:
     - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 196
+      value: 133
       objectReference: {fileID: 0}
     - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 37
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 36
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
@@ -6401,12 +6401,18 @@ PrefabInstance:
     - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
       propertyPath: m_text
-      value: 'You are even stronger than I originally thought, you might have the
-        skills and talent to make it all the way through this dungeon. Have this
-        last tome that may guide you through the last level.
-
-
-'
+      value: "You are even stronger than I originally thought, you might have the
+        skills and talent to make it all the way through this dungeon. \n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_characterSpacing
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518717293771998296, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
+        type: 3}
+      propertyPath: m_lineSpacing
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1821759279956991052, guid: 5b15caed4dc6f4b4f8501290fa6b7a70,
         type: 3}
