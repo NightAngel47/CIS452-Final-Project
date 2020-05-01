@@ -115,6 +115,17 @@ public class Player_Equip_Invoker : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<TomePickup>() != null)
+        {
+            nearTome = collision.gameObject;
+            nearTome.GetComponent<TomePickup>().OpenPanel(true);
+           
+        }
+       
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<TomePickup>() != null)

@@ -4910,7 +4910,7 @@ MonoBehaviour:
   jumpHeight: 7
   mask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
 --- !u!199 &4101813084368866384
 ParticleSystemRenderer:
   serializedVersion: 6
