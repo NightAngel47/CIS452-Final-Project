@@ -38,11 +38,11 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    if(col.gameObject.CompareTag("Player"))
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

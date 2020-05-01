@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 1065352420873899418}
   - component: {fileID: 1065352420873899417}
   - component: {fileID: 1065352420873899416}
+  - component: {fileID: 7435340286646486582}
   m_Layer: 0
   m_Name: TomePickup
   m_TagString: Untagged
@@ -5020,6 +5021,22 @@ MonoBehaviour:
   FireRateText: {fileID: 4159343238687375056}
   SpeedText: {fileID: 5333151053402676579}
   tome: {fileID: 11400000, guid: 32898c135cb10fc4695094511382d5bd, type: 2}
+--- !u!58 &7435340286646486582
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065352420873899363}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.19
 --- !u!1 &1721052841168716356
 GameObject:
   m_ObjectHideFlags: 0

@@ -156,6 +156,7 @@ public class PlayerHealth : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyProjectile"))
         {
             TakeDamage(1);
+            Destroy(other.gameObject);
         }
     }
 
@@ -164,8 +165,18 @@ public class PlayerHealth : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyProjectile"))
         {
             TakeDamage(1);
+            Destroy(other.gameObject);
         }
     }
 
-    #endregion
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+            TakeDamage(1);
+            Destroy(collision.gameObject);
+        }
+    }
 }
+
+    #endregion
