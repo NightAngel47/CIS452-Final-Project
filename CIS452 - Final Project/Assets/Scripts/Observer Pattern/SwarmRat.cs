@@ -76,6 +76,15 @@ public class SwarmRat : MonoBehaviour, IObserver
         {
             swarmRatBehavior.RegisterObserver(this);
         }
+
+        GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<Rigidbody2D>().simulated = false;
+        tempMinRange = minRange;
+        orgColor = this.GetComponent<SpriteRenderer>().color;
+        orgColor.a = .25f;
+        this.GetComponent<SpriteRenderer>().color = orgColor;
+        minRange = 10000000000000000000;
+        Invoke("SpawnFix", 1);
     }
 
     void OnDisable()

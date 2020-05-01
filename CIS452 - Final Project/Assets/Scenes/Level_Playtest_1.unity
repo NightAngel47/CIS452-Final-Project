@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: enemyType
       value: Warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 7723289195384112921, guid: 60d3b143e4a7229498471d5ab0f47ae3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20156,6 +20161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7723289195384112921, guid: 60d3b143e4a7229498471d5ab0f47ae3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20229,6 +20239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyType
       value: Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723289195384112921, guid: 60d3b143e4a7229498471d5ab0f47ae3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
@@ -20466,6 +20481,11 @@ PrefabInstance:
       propertyPath: enemyType
       value: Archer
       objectReference: {fileID: 0}
+    - target: {fileID: 7723289195384112921, guid: 60d3b143e4a7229498471d5ab0f47ae3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20539,6 +20559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyType
       value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723289195384112921, guid: 60d3b143e4a7229498471d5ab0f47ae3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
@@ -20688,6 +20713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyType
       value: Rat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723289195384112921, guid: 60d3b143e4a7229498471d5ab0f47ae3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}
@@ -21912,6 +21942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723289195384112921, guid: 60d3b143e4a7229498471d5ab0f47ae3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7723289195384112922, guid: 60d3b143e4a7229498471d5ab0f47ae3,
         type: 3}

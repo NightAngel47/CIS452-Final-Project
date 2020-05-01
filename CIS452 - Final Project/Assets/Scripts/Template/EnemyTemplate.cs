@@ -26,6 +26,43 @@ public abstract class EnemyTemplate : MonoBehaviour
 
     public GameObject projectilePrefab;
 
+    Color orgColor;
+
+    protected bool canAttack = false;
+
+    private void Start()
+    {
+        GetComponent<CircleCollider2D>().isTrigger = true;
+        GetComponent<Rigidbody2D>().simulated = false;
+        orgColor = this.GetComponent<SpriteRenderer>().color;
+        orgColor.a = .25f;
+        this.GetComponent<SpriteRenderer>().color = orgColor;
+        canAttack = false;
+        Invoke("SpawnFix", 1);
+    }
+
+    private void OnEnable()
+    {
+        GetComponent<CircleCollider2D>().isTrigger = true;
+        GetComponent<Rigidbody2D>().simulated = false;
+        orgColor = this.GetComponent<SpriteRenderer>().color;
+        orgColor.a = .25f;
+        this.GetComponent<SpriteRenderer>().color = orgColor;
+        canAttack = false;
+        Invoke("SpawnFix", 1);
+      
+    }
+
+    private void SpawnFix()
+    {
+        GetComponent<CircleCollider2D>().isTrigger = false;
+        GetComponent<Rigidbody2D>().simulated = true;
+
+        orgColor.a = 1;
+        this.GetComponent<SpriteRenderer>().color = orgColor;
+        canAttack = true;
+    }
+
     public void AgroPlayer()
     {
         RaycastHit2D playerCheck;
@@ -54,17 +91,21 @@ public abstract class EnemyTemplate : MonoBehaviour
     {
         AgroPlayer();
 
-        if (seePlayer == false && methodCalled == false)
+        if (canAttack)
         {
-            methodCalled = true;
-            StartCoroutine("Movement");
-        }
+            if (seePlayer == false && methodCalled == false)
+            {
+                methodCalled = true;
+                StartCoroutine("Movement");
+            }
 
-        if (seePlayer == true && methodCalled == false)
-        {
-            methodCalled = true;
-            Attack();
+            if (seePlayer == true && methodCalled == false)
+            {
+                methodCalled = true;
+                Attack();
+            }
         }
+       
 
 
     }
